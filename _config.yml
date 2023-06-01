@@ -28,7 +28,8 @@ url: "https://smhongok.github.io"
 github_username:  smhongok
 
 # Build settings
-theme: minima
+#theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 

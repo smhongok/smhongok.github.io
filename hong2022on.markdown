@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: default
 permalink: /robustness.html
 ---
 ## <center>  On the Robustness of Normalizing Flows for Inverse Problems in Imaging </center>
@@ -20,40 +20,41 @@ Seoul National University, Republic of Korea
 
 
 <br><br><br><br><br>
+
 <p align="center">
   <img src="files/hong2022on/1.png"  width="500" >
 </p>
-#### Unintended severe artifacts occur in conditional normalizing flows for inverse problems in imaging, which hinder their effectiveness.
+#### <center> Unintended severe artifacts occur in conditional normalizing flows for inverse problems in imaging, which hinder their effectiveness. </center>
 <br><br><br><br><br>
 <p align="center">
   <img src="files/hong2022on/3.png"  width="400" >
 </p>
-#### We found that these artifacts are caused by out-of-distribution (OOD) conditional inputs inducing "exploding inverses" in the conditional affine coupling layer.
+#### <center> We found that these artifacts are caused by out-of-distribution (OOD) conditional inputs inducing "exploding inverses" in the conditional affine coupling layer. </center>
 <br><br><br><br><br>
 <p align="center">
   <img src="files/hong2022on/5.png"  width="400" >
 </p>
-#### With our proposed remedy, we address this critical issue by substituting the affine coupling layers with modified rational quadratic spline coupling layers in normalizing flows, ensuring robustness in generated image samples.
+#### <center>With our proposed remedy, we address this critical issue by substituting the affine coupling layers with modified rational quadratic spline coupling layers in normalizing flows, ensuring robustness in generated image samples. </center>
 <br><br><br><br><br>
 <p align="center">
   <img src="files/hong2022on/remark2.png"  width="500" >
 </p>
-#### Through a comprehensive investigation, we empirically and theoretically reveal the origins of these artifacts and propose conditions to avoid them.
+#### <center> Through a comprehensive investigation, we empirically and theoretically reveal the origins of these artifacts and propose conditions to avoid them. </center>
 <br><br><br><br><br>
 <p align="center">
   <img src="files/hong2022on/2.png"  width="500" >
 </p>
-#### To validate our findings, we conducted experiments on a toy dataset,
+#### <center> To validate our findings, we conducted experiments on a toy dataset, </center>
 <br>
 <p align="center">
   <img src="files/hong2022on/6.png">
 </p>
-#### super-resolution space generation,
+#### <center> super-resolution space generation, </center>
 <br>
 <p align="center">
   <img src="files/hong2022on/7.png">
 </p>
-#### and  low-light image enhancement.
+#### <center> and  low-light image enhancement. </center>
 
 
 <br><br><br><br><br>
