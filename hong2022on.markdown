@@ -15,7 +15,7 @@ permalink: /robustness.html
 Seoul National University, Republic of Korea
 </center>
 
-#### <center> [<a href="https://arxiv.org/abs/2212.04319">arXiv</a>] [<a href="https://arxiv.org/abs/2212.04319">github</a>] [<a href="/bibtex.html#hong23robustness">bibTeX</a>]</center>
+#### <center> [<a href="https://arxiv.org/abs/2212.04319">arXiv</a>] [<a href="/bibtex.html#hong23robustness">bibTeX</a>]</center>
 
 
 

@@ -9,14 +9,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="I am currently a Ph.D. candidate at the Intelligent Computational Imaging Lab in the Department of Electrical and Computer Engineering at Seoul National University. I graduated from the same department in 2020 and decided to continue my research journey in pursuit of a doctoral degree." />
 <meta property="og:description" content="I am currently a Ph.D. candidate at the Intelligent Computational Imaging Lab in the Department of Electrical and Computer Engineering at Seoul National University. I graduated from the same department in 2020 and decided to continue my research journey in pursuit of a doctoral degree." />
-<link rel="canonical" href="http://localhost:4000/robustness.html" />
-<meta property="og:url" content="http://localhost:4000/robustness.html" />
+<link rel="canonical" href="http://localhost:4000/nubsf.html" />
+<meta property="og:url" content="http://localhost:4000/nubsf.html" />
 <meta property="og:site_name" content="Seongmin Hong" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Seongmin Hong" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"I am currently a Ph.D. candidate at the Intelligent Computational Imaging Lab in the Department of Electrical and Computer Engineering at Seoul National University. I graduated from the same department in 2020 and decided to continue my research journey in pursuit of a doctoral degree.","headline":"Seongmin Hong","url":"http://localhost:4000/robustness.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"I am currently a Ph.D. candidate at the Intelligent Computational Imaging Lab in the Department of Electrical and Computer Engineering at Seoul National University. I graduated from the same department in 2020 and decided to continue my research journey in pursuit of a doctoral degree.","headline":"Seongmin Hong","url":"http://localhost:4000/nubsf.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Seongmin Hong" /></head>
 <body><header class="site-header" role="banner">
@@ -36,8 +36,8 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <h2 id="--on-the-robustness-of-normalizing-flows-for-inverse-problems-in-imaging-"><center>  On the Robustness of Normalizing Flows for Inverse Problems in Imaging </center></h2>
-<h4 id="-seongmin-hong1-inbum-park1--se-young-chun12"><center> <a href="">Seongmin Hong</a><sup>1</sup>, <a href="https://inbumpark.github.io/">Inbum Park</a><sup>1</sup> , <a href="https://icl.snu.ac.kr/pi">Se Young Chun</a><sup>1,2</sup></center></h4>
+        <h2 id="--neural-diffeomorphic-non-uniform-b-spline-flows-"><center>  Neural Diffeomorphic Non-uniform B-spline Flows </center></h2>
+<h4 id="-seongmin-hong1--se-young-chun12"><center> <a href="">Seongmin Hong</a><sup>1</sup> , <a href="https://icl.snu.ac.kr/pi">Se Young Chun</a><sup>1,2</sup></center></h4>
 <center>
 <sup>1</sup>Dept. of Electrical and Computer Engineering,   
 <br />
@@ -46,50 +46,49 @@
 Seoul National University, Republic of Korea
 </center>
 
-<h4 id="-arxiv-bibtex"><center> [<a href="https://arxiv.org/abs/2212.04319">arXiv</a>] [<a href="/bibtex.html#hong23robustness">bibTeX</a>]</center></h4>
+<h4 id="-arxiv-github-bibtex"><center> [<a href="https://arxiv.org/abs/2304.04555">arXiv</a>] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]</center></h4>
 
 <p><br /><br /><br /><br /><br /></p>
 
 <p align="center">
-  <img src="files/hong2022on/1.png" width="500" />
+  <img src="files/hong2023nubsf/4.png" width="500" />
 </p>
-<h4 id="-unintended-severe-artifacts-occur-in-conditional-normalizing-flows-for-inverse-problems-in-imaging-which-hinder-their-effectiveness-"><center> Unintended severe artifacts occur in conditional normalizing flows for inverse problems in imaging, which hinder their effectiveness. </center></h4>
+<h4 id="-normalizing-flows-have-been-successfully-modeling-a-complex-probability-distribution-as-an-invertible-transformation-of-a-simple-base-distribution-"><center> Normalizing flows have been successfully modeling a complex probability distribution as an invertible transformation of a simple base distribution. </center></h4>
 <p><br /><br /><br /><br /><br /></p>
 <p align="center">
-  <img src="files/hong2022on/3.png" width="400" />
+  <img src="files/hong2023nubsf/5.png" width="400" />
 </p>
-<h4 id="-we-found-that-these-artifacts-are-caused-by-out-of-distribution-ood-conditional-inputs-inducing-exploding-inverses-in-the-conditional-affine-coupling-layer-"><center> We found that these artifacts are caused by out-of-distribution (OOD) conditional inputs inducing "exploding inverses" in the conditional affine coupling layer. </center></h4>
+<h4 id="-however-there-are-often-applications-that-require-more-than-invertibility-such-as-boltzmann-generator-the-computation-of-energies-and-forces-in-physics-requires-the-second-derivatives-of-the-transformation-to-be-well-defined-and-continuous-"><center> However, there are often applications that require more than invertibility, such as Boltzmann Generator: The computation of energies and forces in physics requires the second derivatives of the transformation to be well-defined and continuous. </center></h4>
 <p><br /><br /><br /><br /><br /></p>
 <p align="center">
-  <img src="files/hong2022on/5.png" width="400" />
+  <img src="files/hong2023nubsf/7.png" width="600" />
 </p>
-<h4 id="with-our-proposed-remedy-we-address-this-critical-issue-by-substituting-the-affine-coupling-layers-with-modified-rational-quadratic-spline-coupling-layers-in-normalizing-flows-ensuring-robustness-in-generated-image-samples-"><center>With our proposed remedy, we address this critical issue by substituting the affine coupling layers with modified rational quadratic spline coupling layers in normalizing flows, ensuring robustness in generated image samples. </center></h4>
+<h4 id="existing-normalizing-flows-have-their-own-weaknesses-so-here-comes-our-motivation-our-non-uniform-b-spline-flow-has-sufficient-expressivity-at-least-c2-diffeomorphic-and-has-an-analytic-inverse-"><center>Existing normalizing flows have their own weaknesses, so here comes our motivation. Our Non-Uniform B-spline flow has sufficient expressivity, at least C2-diffeomorphic, and has an analytic inverse. </center></h4>
 <p><br /><br /><br /><br /><br /></p>
 <p align="center">
-  <img src="files/hong2022on/remark2.png" width="500" />
+  <img src="files/hong2023nubsf/fig2.png" width="500" />
 </p>
-<h4 id="-through-a-comprehensive-investigation-we-empirically-and-theoretically-reveal-the-origins-of-these-artifacts-and-propose-conditions-to-avoid-them-"><center> Through a comprehensive investigation, we empirically and theoretically reveal the origins of these artifacts and propose conditions to avoid them. </center></h4>
+<h4 id="we-can-observe-that-the-non-uniform-b-spline-we-have-created-is-diffeomorphic-invertible-and-sufficiently-expressive"><center>We can observe that the non-uniform B-spline we have created is diffeomorphic, invertible, and sufficiently expressive.</center></h4>
 <p><br /><br /><br /><br /><br /></p>
 <p align="center">
-  <img src="files/hong2022on/2.png" width="500" />
+  <img src="files/hong2023nubsf/14.png" width="600" />
 </p>
 <h4 id="-to-validate-our-findings-we-conducted-experiments-on-a-toy-dataset-"><center> To validate our findings, we conducted experiments on a toy dataset, </center></h4>
 <p><br /></p>
 <p align="center">
-  <img src="files/hong2022on/6.png" />
+  <img src="files/hong2023nubsf/15.jpg" width="600" />
 </p>
-<h4 id="-super-resolution-space-generation-"><center> super-resolution space generation, </center></h4>
+<h4 id="-molecule-dynamic-simulation-as-stable-as-smooth-normalizing-flows-"><center> molecule dynamic simulation, (As stable as smooth normalizing flows!) </center></h4>
 <p><br /></p>
 <p align="center">
-  <img src="files/hong2022on/7.png" />
+  <img src="files/hong2023nubsf/16.png" width="600" />
 </p>
-<h4 id="-and--low-light-image-enhancement-"><center> and  low-light image enhancement. </center></h4>
+<h4 id="-and-molecule-structure-generation-faster-than-smooth-normalizing-flows-"><center> and molecule structure generation. (Faster than smooth normalizing flows!) </center></h4>
 
 <p><br /><br /><br /><br /><br /></p>
 
 <h3 id="abstract">Abstract</h3>
-<p>Conditional normalizing flows can generate diverse image samples for solving inverse problems. Most normalizing flows for inverse problems in imaging employ the conditional affine coupling layer that can generate diverse images quickly. However, unintended severe artifacts are occasionally observed in the output of them. In this work, we address this critical issue by investigating the origins of these artifacts and proposing the conditions to avoid them. First of all, we empirically and theoretically reveal that these problems are caused by “exploding inverse” in the conditional affine coupling layer for certain out-of-distribution (OOD) conditional inputs. Then, we further validated that the probability of causing erroneous artifacts in pixels is highly correlated with a Mahalanobis distance-based OOD score for inverse problems in imaging. Lastly, based on our investigations, we propose a remark to avoid exploding inverse and then based on it, we suggest a simple remedy that substitutes the affine coupling layers with the modified rational quadratic spline coupling layers in normalizing flows, to encourage the robustness of generated image samples. Our experimental results demonstrated that our suggested methods effectively suppressed critical artifacts occurring in normalizing flows for super-resolution space generation and low-light image enhancement.</p>
-
+<p>Normalizing flows have been successfully modeling a complex probability distribution as an invertible transformation of a simple base distribution. However, there are often applications that require more than invertibility. For instance, the computation of energies and forces in physics requires the second derivatives of the transformation to be well-defined and continuous. Smooth normalizing flows employ infinitely differentiable transformation, but with the price of slow non-analytic inverse transforms. In this work, we propose diffeomorphic non-uniform B-spline flows that are at least twice continuously differentiable while bi-Lipschitz continuous, enabling efficient parametrization while retaining analytic inverse transforms based on a sufficient condition for diffeomorphism. Firstly, we investigate the sufficient condition for C<sup>k-2</sup>-diffeomorphic non-uniform kth-order B-spline transformations. Then, we derive an analytic inverse transformation of the non-uniform cubic B-spline transformation for neural diffeomorphic non-uniform B-spline flows. Lastly, we performed experiments on solving the force matching problem in Boltzmann generators, demonstrating that our C<sup>2</sup>-diffeomorphic non-uniform B-spline flows yielded solutions better than previous spline flows and faster than smooth normalizing flows.</p>
 
       </div>
     </main><footer class="site-footer h-card">

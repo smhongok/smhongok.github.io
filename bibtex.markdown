@@ -21,3 +21,23 @@ permalink: /bibtex.html
           archivePrefix={arXiv},
           primaryClass={cs.CV}
     }
+    @article{hong2023advanced,
+      title={Advanced direction of arrival estimation using step-learnt iterative soft-thresholding for frequency-modulated continuous wave multiple-input multiple-output radar},
+      author={Hong, Seongmin and Kim, Seong-Cheol and Lee, Seongwook},
+      journal={IET Radar, Sonar \& Navigation},
+      volume={17},
+      number={1},
+      pages={2--14},
+      year={2023},
+      publisher={Wiley Online Library}
+    }
+    @article{hong2021radar,
+      title={Radar signal decomposition in steering vector space for multi-target classification},
+      author={Hong, Seongmin and Lee, Seongwook and Lee, Byeong-Ho and Kim, Jinwook and Kim, Yong-Hwa and Kim, Seong-Cheol},
+      journal={IEEE Sensors Journal},
+      volume={21},
+      number={22},
+      pages={25843--25852},
+      year={2021},
+      publisher={IEEE}
+    }

@@ -20,7 +20,12 @@ Email: smhongok@snu.ac.kr
 * #### **Neural Diffeomorphic Non-uniform B-spline Flows**  
 **Seongmin Hong**,  Se Young Chun  
 Thirty-Seventh AAAI Conference on Artificial Intelligence (**AAAI**), 2023.  
-[[arXiv](https://arxiv.org/abs/2304.04555)]
+[[arXiv](https://arxiv.org/abs/2304.04555)] [[project](/nubsf.html)] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]
+
+* #### **Advanced direction of arrival estimation using step-learnt iterative soft-thresholding for frequency-modulated continuous wave multiple-input multiple-output radar**   
+**Seongmin Hong**, Seong-Cheol Kim, Seongwook Lee  
+IET Radar, Sonar & Navigation, 2023.  
+[[Paper](https://doi.org/10.1049/rsn2.12319)] [<a href="/bibtex.html#hong23advanced">bibTeX</a>]
 
 ### 2022
 * #### **On the Robustness of Normalizing Flows for Inverse Problems in Imaging**   
@@ -28,13 +33,9 @@ Thirty-Seventh AAAI Conference on Artificial Intelligence (**AAAI**), 2023.
 ArXiv, 2022.  
 [[arXiv](https://arxiv.org/abs/2212.04319)] [[project](/robustness.html)] [<a href="/bibtex.html#hong23robustness">bibTeX</a>]
 
-* #### **Advanced direction of arrival estimation using step-learnt iterative soft-thresholding for frequency-modulated continuous wave multiple-input multiple-output radar**   
-**Seongmin Hong**, Seong-Cheol Kim, Seongwook Lee  
-IET Radar, Sonar & Navigation, 2022.  
-[[Paper](https://doi.org/10.1049/rsn2.12319)]
 
 ### 2021
 * #### **Radar Signal Decomposition in Steering Vector Space for Multi-Target Classification**  
 **Seongmin Hong**, Seongwook Lee, Byeong-Ho Lee, Jinwook Kim, Yong-Hwa Kim, Seong-Cheol Kim  
 IEEE Sensors Journal, 2021.  
-[[Paper](https://ieeexplore.ieee.org/abstract/document/9552897)]
+[[Paper](https://ieeexplore.ieee.org/abstract/document/9552897)] [<a href="/bibtex.html#hong21radar">bibTeX</a>]
