@@ -14,6 +14,7 @@ permalink: /nubsf.html
 <br>
 Seoul National University, Republic of Korea
 </center>
+### <center> AAAI 2023 </center>
 
 #### <center> [<a href="https://arxiv.org/abs/2304.04555">arXiv</a>] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]</center>
 
