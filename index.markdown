@@ -20,7 +20,7 @@ Email: smhongok@snu.ac.kr
 * #### **Neural Diffeomorphic Non-uniform B-spline Flows**  
 **Seongmin Hong**,  Se Young Chun  
 Thirty-Seventh AAAI Conference on Artificial Intelligence (**AAAI**), 2023.  
-[[arXiv](https://arxiv.org/abs/2304.04555)] [[project](/nubsf.html)] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]
+[[Paper](https://ojs.aaai.org/index.php/AAAI/article/view/26441)][[arXiv](https://arxiv.org/abs/2304.04555)] [[project](/nubsf.html)] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]
 
 * #### **Advanced direction of arrival estimation using step-learnt iterative soft-thresholding for frequency-modulated continuous wave multiple-input multiple-output radar**   
 **Seongmin Hong**, Seong-Cheol Kim, Seongwook Lee  
