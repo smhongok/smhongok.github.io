@@ -17,7 +17,7 @@ Seoul National University, Republic of Korea
 <br>
 ### <center> <strong>AAAI 2023</strong> </center>
 
-#### <center> [<a href="https://arxiv.org/abs/2304.04555">arXiv</a>] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]</center>
+#### <center>[<a href="https://ojs.aaai.org/index.php/AAAI/article/view/26441">Paper</a>] [<a href="https://arxiv.org/abs/2304.04555">arXiv</a>] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]</center>
 
 
 

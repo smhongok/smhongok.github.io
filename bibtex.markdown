@@ -5,13 +5,14 @@
 #layout: page
 permalink: /bibtex.html
 ---
-    @misc{hong2023neural,
+    @inproceedings{hong2023neural,
           title={Neural Diffeomorphic Non-uniform B-spline Flows}, 
           author={Seongmin Hong and Se Young Chun},
-          year={2023},
-          eprint={2304.04555},
-          archivePrefix={arXiv},
-          primaryClass={cs.LG}
+          booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+          volume={37},
+          number={10},
+          pages={12225--12233},
+          year={2023}
     }
     @misc{hong2023robustness,
           title={On the Robustness of Normalizing Flows for Inverse Problems in Imaging}, 
