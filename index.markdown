@@ -17,21 +17,22 @@ Email: smhongok@snu.ac.kr
 ## Selected Publications
 ### 2023
 
+* #### **On the Robustness of Normalizing Flows for Inverse Problems in Imaging**   
+
+  **Seongmin Hong**, Inbum Park, Se Young Chun  
+  International Conference on Computer Vision (**ICCV**), 2023.  
+  [[arXiv](https://arxiv.org/abs/2212.04319)] [[project](/robustness.html)] [<a href="/bibtex.html#hong23robustness">bibTeX</a>]
+
 * #### **Neural Diffeomorphic Non-uniform B-spline Flows**  
-**Seongmin Hong**,  Se Young Chun  
-Thirty-Seventh AAAI Conference on Artificial Intelligence (**AAAI**), 2023.  
-[[Paper](https://ojs.aaai.org/index.php/AAAI/article/view/26441)][[arXiv](https://arxiv.org/abs/2304.04555)] [[project](/nubsf.html)] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]
+
+  **Seongmin Hong**,  Se Young Chun  
+  Thirty-Seventh AAAI Conference on Artificial Intelligence (**AAAI**), 2023.  
+  [[Paper](https://ojs.aaai.org/index.php/AAAI/article/view/26441)][[arXiv](https://arxiv.org/abs/2304.04555)] [[project](/nubsf.html)] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]
 
 * #### **Advanced direction of arrival estimation using step-learnt iterative soft-thresholding for frequency-modulated continuous wave multiple-input multiple-output radar**   
 **Seongmin Hong**, Seong-Cheol Kim, Seongwook Lee  
 IET Radar, Sonar & Navigation, 2023.  
 [[Paper](https://doi.org/10.1049/rsn2.12319)] [<a href="/bibtex.html#hong23advanced">bibTeX</a>]
-
-### 2022
-* #### **On the Robustness of Normalizing Flows for Inverse Problems in Imaging**   
-**Seongmin Hong**, Inbum Park, Se Young Chun  
-ArXiv, 2022.  
-[[arXiv](https://arxiv.org/abs/2212.04319)] [[project](/robustness.html)] [<a href="/bibtex.html#hong23robustness">bibTeX</a>]
 
 
 ### 2021
