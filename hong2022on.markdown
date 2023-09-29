@@ -67,7 +67,11 @@ Conditional normalizing flows can generate diverse image samples for solving inv
 
 
 
-### <h2 id="bibtex">BibTeX</h2>
+< a name="bibtex">
+
+### BibTeX
+
+
 
 <pre> 
 @InProceedings{Hong_2023_ICCV,
