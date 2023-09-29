@@ -49,11 +49,13 @@ Seoul National University, Republic of Korea
 </p>
 #### <center> To validate our findings, we conducted experiments on a toy dataset, </center>
 <br>
+
 <p align="center">
   <img src="files/hong2022on/6.png">
 </p>
 #### <center> super-resolution space generation, </center>
 <br>
+
 <p align="center">
   <img src="files/hong2022on/7.png">
 </p>
@@ -67,7 +69,7 @@ Conditional normalizing flows can generate diverse image samples for solving inv
 
 
 
-< a name="bibtex">
+<a name="bibtex">
 
 ### BibTeX
 
