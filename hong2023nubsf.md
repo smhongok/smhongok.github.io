@@ -17,7 +17,7 @@ Seoul National University, Republic of Korea
 <br>
 ### <center> <strong>AAAI 2023</strong> </center>
 
-#### <center>[<a href="https://ojs.aaai.org/index.php/AAAI/article/view/26441">Paper</a>] [<a href="https://arxiv.org/abs/2304.04555">arXiv</a>] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]</center>
+#### <center>[<a href="https://ojs.aaai.org/index.php/AAAI/article/view/26441">Paper</a>] [<a href="https://arxiv.org/abs/2304.04555">arXiv</a>] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="#bibtex">bibTeX</a>]</center>
 
 
 
@@ -63,3 +63,23 @@ Seoul National University, Republic of Korea
 
 ### Abstract
 Normalizing flows have been successfully modeling a complex probability distribution as an invertible transformation of a simple base distribution. However, there are often applications that require more than invertibility. For instance, the computation of energies and forces in physics requires the second derivatives of the transformation to be well-defined and continuous. Smooth normalizing flows employ infinitely differentiable transformation, but with the price of slow non-analytic inverse transforms. In this work, we propose diffeomorphic non-uniform B-spline flows that are at least twice continuously differentiable while bi-Lipschitz continuous, enabling efficient parametrization while retaining analytic inverse transforms based on a sufficient condition for diffeomorphism. Firstly, we investigate the sufficient condition for C<sup>k-2</sup>-diffeomorphic non-uniform kth-order B-spline transformations. Then, we derive an analytic inverse transformation of the non-uniform cubic B-spline transformation for neural diffeomorphic non-uniform B-spline flows. Lastly, we performed experiments on solving the force matching problem in Boltzmann generators, demonstrating that our C<sup>2</sup>-diffeomorphic non-uniform B-spline flows yielded solutions better than previous spline flows and faster than smooth normalizing flows.
+
+
+
+<br><br>
+
+<a name="bibtex">
+
+### BibTeX
+
+<pre> 
+@inproceedings{hong2023neural,
+      title={Neural Diffeomorphic Non-uniform B-spline Flows}, 
+      author={Seongmin Hong and Se Young Chun},
+      booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+      volume={37},
+      number={10},
+      pages={12225--12233},
+      year={2023}
+}
+</pre>
