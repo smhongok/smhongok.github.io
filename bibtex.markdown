@@ -14,13 +14,13 @@ permalink: /bibtex.html
           pages={12225--12233},
           year={2023}
     }
-    @misc{hong2023robustness,
-          title={On the Robustness of Normalizing Flows for Inverse Problems in Imaging}, 
-          author={Seongmin Hong and Inbum Park and Se Young Chun},
-          year={2023},
-          eprint={2212.04319},
-          archivePrefix={arXiv},
-          primaryClass={cs.CV}
+    @InProceedings{Hong_2023_ICCV,
+        author    = {Hong, Seongmin and Park, Inbum and Chun, Se Young},
+        title     = {On the Robustness of Normalizing Flows for Inverse Problems in Imaging},
+        booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+        month     = {October},
+        year      = {2023},
+        pages     = {10745-10755}
     }
     @article{hong2023advanced,
       title={Advanced direction of arrival estimation using step-learnt iterative soft-thresholding for frequency-modulated continuous wave multiple-input multiple-output radar},
