@@ -40,11 +40,11 @@ Seoul National University, Republic of Korea
   <img src="files/hong2022on/3-01.gif"  width="800" >
 </p>
 
-<center> We found that these artifacts are caused by out-of-distribution (OOD) conditional inputs inducing "exploding inverses" in the conditional affine coupling layer (**Aff**). </center>
+<center> We found that these artifacts are caused by out-of-distribution (OOD) conditional inputs inducing "exploding inverses" in the conditional affine coupling layer (<code>Aff</code>). </center>
 
-**OOD**: Conditional input (i.e., **y**) whose embedding (i.e., g<sub>**θ**</sub> (**y**)) has a large Mahalanobis distance [Lee et al., NeurIPS 2018]  from the training set.
+##### **OOD**: Conditional input (i.e., **y**) whose embedding (i.e., g<sub>**θ**</sub> (**y**)) has a large Mahalanobis distance [Lee et al., NeurIPS 2018]  from the training set.
 
-**Exploding inverse**: Originally reported in *unconditional* normalizing flows [Behrmann et al., AISTATS 2021], but the mechanism is different from the *conditional* normalizing flow. 
+##### **Exploding inverse**: Originally reported in *unconditional* normalizing flows [Behrmann et al., AISTATS 2021], but the mechanism is different from the *conditional* normalizing flow. 
 
 <br><br><br><br><br>
 
@@ -59,8 +59,6 @@ Seoul National University, Republic of Korea
 <p align="center">
   <img src="files/hong2022on/5a.png"  width="400" >
 </p>
-
-
 
 <center>We revealed the origin of the errors: The slope (<i>s</i>) of the affine should have an upper bound <i>s<sub>u</sub></i> for training. <i>s</i> ≪ <i>s</i><sub><i>u</i></sub> makes the exploding inverse, and this happens when <b>y</b> is OOD.</center>
 
