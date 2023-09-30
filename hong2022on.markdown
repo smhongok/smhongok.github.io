@@ -25,10 +25,21 @@ Seoul National University, Republic of Korea
 <br><br><br><br><br>
 
 <p align="center">
-  <img src="files/hong2022on/1.png"  width="500" >
+  <img src="files/hong2022on/1-01.png"  width="500" >
 </p>
+
 #### <center> Unintended severe artifacts occur in conditional normalizing flows for inverse problems in imaging, which hinder their effectiveness. </center>
+
+**Conditional normalizing flow**: A generative model w/ fastness, diversity.
+
+**Inverse Problems in Imaging**: Super-resolution, low-light enhancement, etc.  
+
 <br><br><br><br><br>
+
+<p align="center">
+<video autoplay loop>   <source src="files/hong2022on/3-01.mp4" type="video/mp4">  </video>
+</p>
+
 <p align="center">
   <img src="files/hong2022on/3.png"  width="400" >
 </p>
