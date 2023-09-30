@@ -69,21 +69,14 @@ Seoul National University, Republic of Korea
 <br><br><br><br><br>
 
 <p align="center">
-  <img src="files/hong2022on/remark2.png"  width="500" >
+  <img src="files/hong2022on/remark2_01.png"  width="800" >
 </p>
 
-#### <center> We propose a remark to avoid the exploding inverse. </center>
-
-<br><br><br><br><br>
-
-<p align="center">
-  <img src="files/hong2022on/5.png"  width="400" >
-</p>
-#### <center>We propose remedy to avoid the exploding inverse: use another one but affine, following Remark 2.</center>
+#### <center> We propose a remark to avoid the exploding inverse. We then propose a remedy to avoid the exploding inverse: use another one but affine, following Remark 2.</center>
 
 <br>
 
-##### **Another one**: B-spline [<a href="https://smhongok.github.io/nubsf.html">Hong et al., AAAI 2023</a>], or the modified RQ-spline.
+##### **Another one**: B-spline [<a href="https://smhongok.github.io/nubsf.html">Hong et al., AAAI 2023</a>], or the modified RQ-spline (the figure).
 
 <br><br><br><br><br>
 
