@@ -46,7 +46,7 @@ Seoul National University, Republic of Korea
 
 <br>
 
-##### **OOD**: Conditional input (i.e., **y**) whose embedding (i.e., g<sub>**θ**</sub> (**y**)) has a large Mahalanobis distance [Lee et al., NeurIPS 2018]  from the training set.
+##### **OOD**: Conditional input (i.e., **y**) whose embedding (i.e., <i>g</i><sub>**θ**</sub> (**y**)) has a large Mahalanobis distance [Lee et al., NeurIPS 2018]  from the training set.
 
 ##### **Exploding inverse**: Originally reported in *unconditional* normalizing flows [Behrmann et al., AISTATS 2021], but the mechanism is different from the *conditional* normalizing flow. 
 
