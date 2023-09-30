@@ -60,7 +60,9 @@ Seoul National University, Republic of Korea
   <img src="files/hong2022on/5a.png"  width="400" >
 </p>
 
-<center>We revealed the origin of the errors: The slope (*s*) of the affine should have an upper bound *s*<sub>*u*</sub> for training. *s* ≪ *s*<sub>*u*</sub> makes the exploding inverse, and this happens when **y** is OOD.</center>
+
+
+<center>We revealed the origin of the errors: The slope (<i>s</i>) of the affine should have an upper bound <i>s<sub>u</sub></i> for training. <i>s</i> ≪ <i>s</i><sub><i>u</i></sub> makes the exploding inverse, and this happens when <b>y</b> is OOD.</center>
 
 <br><br><br><br><br>
 
