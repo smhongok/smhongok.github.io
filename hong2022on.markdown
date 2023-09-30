@@ -37,12 +37,9 @@ Seoul National University, Republic of Korea
 <br><br><br><br><br>
 
 <p align="center">
-<video autoplay loop>   <source src="files/hong2022on/3-01.mp4" type="video/mp4">  </video>
+  <img src="files/hong2022on/3-01.gif"  width="800" >
 </p>
 
-<p align="center">
-  <img src="files/hong2022on/3.png"  width="400" >
-</p>
 #### <center> We found that these artifacts are caused by out-of-distribution (OOD) conditional inputs inducing "exploding inverses" in the conditional affine coupling layer. </center>
 <br><br><br><br><br>
 <p align="center">
