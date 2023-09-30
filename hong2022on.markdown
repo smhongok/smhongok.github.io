@@ -40,18 +40,49 @@ Seoul National University, Republic of Korea
   <img src="files/hong2022on/3-01.gif"  width="800" >
 </p>
 
-#### <center> We found that these artifacts are caused by out-of-distribution (OOD) conditional inputs inducing "exploding inverses" in the conditional affine coupling layer. </center>
+#### <center> We found that these artifacts are caused by out-of-distribution (OOD) conditional inputs inducing "exploding inverses" in the conditional affine coupling layer (**Aff**). </center>
+
+**OOD**: Conditional input (i.e., **y**) whose embedding (i.e., g<sub>**θ**</sub> (**y**)) has a large Mahalanobis distance [Lee et al., NeurIPS 2018]  from the training set.
+
+**Exploding inverse**: Originally reported in *unconditional* normalizing flows [Behrmann et al., AISTATS 2021], but the mechanism is different from the *conditional* normalizing flow. 
+
 <br><br><br><br><br>
+
 <p align="center">
-  <img src="files/hong2022on/5.png"  width="400" >
+  <img src="files/hong2022on/explodinginverse.gif"  width="400" >
 </p>
-#### <center>With our proposed remedy, we address this critical issue by substituting the affine coupling layers with modified rational quadratic spline coupling layers in normalizing flows, ensuring robustness in generated image samples. </center>
+
+#### <center>Exploding inverse amplifies the magnitude of features, resulting in saturated colors (colorful artifacts) and NaN pixels (black region).</center>
+
 <br><br><br><br><br>
+
+<p align="center">
+  <img src="files/hong2022on/5a.png"  width="400" >
+</p>
+
+#### <center>We revealed the origin of the errors: The slope (*s*) of the affine should have an upper bound *s*<sub>*u*</sub> for training. *s* ≪ *s*<sub>*u*</sub> makes the exploding inverse, and this happens when **y** is OOD.</center>
+
+<br><br><br><br><br>
+
 <p align="center">
   <img src="files/hong2022on/remark2.png"  width="500" >
 </p>
-#### <center> Through a comprehensive investigation, we empirically and theoretically reveal the origins of these artifacts and propose conditions to avoid them. </center>
+
+#### <center> We propose a remark to avoid the exploding inverse. </center>
+
 <br><br><br><br><br>
+
+<p align="center">
+  <img src="files/hong2022on/5.png"  width="400" >
+</p>
+#### <center>We propose remedy to avoid the exploding inverse: use another one but affine, following Remark 2.</center>
+
+**Another one**: B-spline [<a href="https://smhongok.github.io/nubsf.html">Hong et al., AAAI 2023</a>], or the modified RQ-spline.
+
+<br><br><br><br><br>
+
+#### 
+
 
 <p align="center">
   <img src="files/hong2022on/2.png"  width="500" >
