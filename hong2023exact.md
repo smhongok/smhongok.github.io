@@ -36,11 +36,11 @@ Seoul National University, Republic of Korea
 
 <br><br><br><br><br>
 
-|                             | Standard sampling methods                             | Inversion of high-order DPM-solvers                   | Inversion with classifier-free guidance > 1           |
+|                             | Standard <br>sampling <br>methods              | Inversion of <br>high-order <br>DPM-solvers         | Inversion with <br> classifier-free <br>guidance > 1 |
 | --------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| Wallace et al., 2023 | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
-| Zhang et al., 2023 | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
-| Pan et al., 2023    | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> |
+| Wallace et al. | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
+| Zhang et al. | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
+| Pan et al.    | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> |
 | *Ours*                      | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
 
 #### <center> We can perform exact inversion of w/o model modification regardless of whether the images were generated using high-order DPM-solvers or large classifier-free guidance. </center>
@@ -97,7 +97,7 @@ Diffusion probabilistic models (DPMs) are a key component in modern generative m
 - Guoqiang Zhang, Jonathan P Lewis, and W Bastiaan Kleijn. Exact diffusion inversion via bi-directional integration approximation. arXiv:2307.10829, 2023.
 - Zhihong Pan, Riccardo Gherardi, Xiufeng Xie, and Stephen Huang. Effective real image editing with accelerated iterative diffusion inversion. In ICCV, pages 15912–15921, 2023.
 - Yuxin Wen, John Kirchenbauer, Jonas Geiping, and Tom Goldstein. Tree-Ring Watermarks: Fingerprints for diffusion images that are invisible and robust. arXiv:2305.20030, 2023.
-- Or Patashnik, Daniel Garibi, Idan Azuri, Hadar AverbuchElor, and Daniel Cohen-Or. Localizing object-level shape variations with text-to-image diffusion models. In ICCV, 2023.
+- Or Patashnik, Daniel Garibi, Idan Azuri, Hadar Averbuch-Elor, and Daniel Cohen-Or. Localizing object-level shape variations with text-to-image diffusion models. In ICCV, 2023.
 
 <br><br>
 
