@@ -9,7 +9,7 @@ permalink: /inv-dpm.html
 
 ## <center>  On Exact Inversion of DPM-Solvers</center>
 
-#### <center> <a href="">Seongmin Hong</a><sup>1</sup>, [Kyeonghyun Lee](https://www.linkedin.com/in/khlee0192)<sup>1</sup>, [Suh Yoon Jeon](https://www.linkedin.com/in/suhyoonjeon)<sup>1</sup>, [Hyewon Bae](https://www.linkedin.com/in/hyewon-bae-05865a260)<sup>1</sup>, <a href="https://icl.snu.ac.kr/pi">Se Young Chun</a><sup>1,2</sup></center>
+#### <center> <a href="">Seongmin Hong</a><sup>1</sup>, <a href="https://www.linkedin.com/in/khlee0192">Kyeonghyun Lee</a><sup>1</sup>, <a href="https://www.linkedin.com/in/suhyoonjeon">Suh Yoon Jeon</a><sup>1</sup>, <a href="https://www.linkedin.com/in/hyewon-bae-05865a260">Hyewon Bae</a><sup>1</sup>, <a href="https://icl.snu.ac.kr/pi">Se Young Chun</a><sup>1,2</sup></center>
 
 <center>
 <sup>1</sup>Dept. of Electrical and Computer Engineering,   
@@ -38,18 +38,12 @@ Seoul National University, Republic of Korea
 
 |                             | Standard sampling methods                             | Inversion of high-order DPM-solvers                   | Inversion with classifier-free guidance > 1           |
 | --------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| Wallace et al., 2023 | :x:                                                   | :x:                                                   | <span style="color:green; font-size:1.8em; ">✔</span> |
-| Zhang et al., 2023 | :x:                                                   | :x:                                                   | <span style="color:green; font-size:1.8em; ">✔</span> |
-| Pan et al., 2023    | <span style="color:green; font-size:1.8em; ">✔</span> | :x:                                                   | :x:                                                   |
+| Wallace et al., 2023 | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
+| Zhang et al., 2023 | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
+| Pan et al., 2023    | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> |
 | *Ours*                      | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
 
 #### <center> We can perform exact inversion of w/o model modification regardless of whether the images were generated using high-order DPM-solvers or large classifier-free guidance. </center>
-
-<br>
-
-- Bram Wallace, Akash Gokul, and Nikhil Naik. EDICT: Exact Diffusion Inversion via Coupled Transformations. In CVPR, pages 22532–22541, 2023.
-- Guoqiang Zhang, Jonathan P Lewis, and W Bastiaan Kleijn. Exact diffusion inversion via bi-directional integration approximation. arXiv:2307.10829, 2023.
-- Zhihong Pan, Riccardo Gherardi, Xiufeng Xie, and Stephen Huang. Effective real image editing with accelerated iterative diffusion inversion. In ICCV, pages 15912–15921, 2023
 
 <br><br><br><br><br>
 
@@ -64,7 +58,7 @@ Seoul National University, Republic of Korea
 <br><br><br><br><br>
 
 <p align="center">
-  <img src="files/hong2023exact/fig2.png"  width="500" >
+  <img src="files/hong2023exact/fig2.png"  width="800" >
 </p>
 
 #### <center> Our Algorithms (rows 2, 5) significantly reduce reconstruction errors, whether it’s for images or noise, DDIM or high-order DPM-solvers, or pixel-space DPM or Stable Diffusion. </center>
@@ -72,28 +66,20 @@ Seoul National University, Republic of Korea
 <br><br><br><br><br>
 
 <p align="center">
-  <img src="files/hong2023exact/fig4.png"  width="500" >
+  <img src="files/hong2023exact/fig4.png"  width="800" >
 </p>
 
 #### <center> Our exact inversion improves the watermark detection of Wen et al., </center>
-
-<br>
-
-Yuxin Wen, John Kirchenbauer, Jonas Geiping, and Tom Goldstein. Tree-Ring Watermarks: Fingerprints for diffusion images that are invisible and robust. arXiv:2305.20030, 2023.
 
 <br><br><br><br><br>
 
 
 
 <p align="center">
-  <img src="files/hong2023exact/fig6.png"  width="500" >
+  <img src="files/hong2023exact/fig6.png"  width="800" >
 </p>
 
 #### <center> improves the background-preserving image editing of Patashnik et al. </center>
-
-<br>
-
-Or Patashnik, Daniel Garibi, Idan Azuri, Hadar AverbuchElor, and Daniel Cohen-Or. Localizing object-level shape variations with text-to-image diffusion models. In ICCV, 2023.
 
 <br><br><br><br>
 
@@ -104,6 +90,14 @@ Or Patashnik, Daniel Garibi, Idan Azuri, Hadar AverbuchElor, and Daniel Cohen-Or
 Diffusion probabilistic models (DPMs) are a key component in modern generative models. DPM-solvers have achieved reduced latency and enhanced quality significantly, but have posed challenges to find the exact inverse (i.e., finding the initial noise from the given image). Here we investigate the exact inversions for DPM-solvers and propose algorithms to perform them when samples are generated by the first-order as well as higher-order DPM-solvers. For each explicit denoising step in DPM-solvers, we formulated the inversions using implicit methods such as gradient descent or forward step method to ensure the robustness to large classifier-free guidance unlike the prior approach using fixed-point iteration. Experimental results demonstrated that our proposed exact inversion methods significantly reduced the error of both image and noise reconstructions, greatly enhanced the ability to distinguish invisible watermarks and well prevented unintended background changes consistently during image editing.
 
 
+
+### References
+
+- Bram Wallace, Akash Gokul, and Nikhil Naik. EDICT: Exact Diffusion Inversion via Coupled Transformations. In CVPR, pages 22532–22541, 2023.
+- Guoqiang Zhang, Jonathan P Lewis, and W Bastiaan Kleijn. Exact diffusion inversion via bi-directional integration approximation. arXiv:2307.10829, 2023.
+- Zhihong Pan, Riccardo Gherardi, Xiufeng Xie, and Stephen Huang. Effective real image editing with accelerated iterative diffusion inversion. In ICCV, pages 15912–15921, 2023.
+- Yuxin Wen, John Kirchenbauer, Jonas Geiping, and Tom Goldstein. Tree-Ring Watermarks: Fingerprints for diffusion images that are invisible and robust. arXiv:2305.20030, 2023.
+- Or Patashnik, Daniel Garibi, Idan Azuri, Hadar AverbuchElor, and Daniel Cohen-Or. Localizing object-level shape variations with text-to-image diffusion models. In ICCV, 2023.
 
 <br><br>
 
