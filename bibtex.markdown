@@ -5,6 +5,14 @@
 #layout: page
 permalink: /bibtex.html
 ---
+    @misc{hong2023exact,
+          title={On Exact Inversion of DPM-Solvers}, 
+          author={Seongmin Hong and Kyeonghyun Lee and Suh Yoon Jeon and Hyewon Bae and Se Young Chun},
+          year={2023},
+          eprint={2311.18387},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV}
+    }
     @inproceedings{hong2023neural,
           title={Neural Diffeomorphic Non-uniform B-spline Flows}, 
           author={Seongmin Hong and Se Young Chun},

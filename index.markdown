@@ -18,11 +18,18 @@ Email: smhongok at snu.ac.kr
 ## Selected Publications
 ### 2023
 
+* #### **On Exact Inversion of DPM-Solvers**  
+
+  **Seongmin Hong**,  Kyeonghyun Lee, Suh Yoon Jeon, Hyewon Bae, Se Young Chun  
+  arXiv, 2023.  
+  [[arXiv](https://arxiv.org/abs/2311.18387)] [[project](/inv-dpm.html)] [<a href="https://github.com/smhongok/inv-dpm">github</a>] [<a href="/bibtex.html#hong23exact">bibTeX</a>]
+  
 * #### **On the Robustness of Normalizing Flows for Inverse Problems in Imaging**   
 
   **Seongmin Hong**, Inbum Park, Se Young Chun  
   International Conference on Computer Vision (**ICCV**), 2023.  
   [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Hong_On_the_Robustness_of_Normalizing_Flows_for_Inverse_Problems_in_ICCV_2023_paper.pdf">Paper</a>] [<a href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Hong_On_the_Robustness_ICCV_2023_supplemental.pdf">supp</a>] [[arXiv](https://arxiv.org/abs/2212.04319)] [[project](/robustness.html)] [<a href="/bibtex.html#hong23robustness">bibTeX</a>]
+
 
 * #### **Neural Diffeomorphic Non-uniform B-spline Flows**  
 
