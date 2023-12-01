@@ -23,7 +23,7 @@ Seoul National University, Republic of Korea
 
 
 
-#### <center>[<a href="https://arxiv.org/abs/2212.04319">arXiv</a>] [github] [<a href="#bibtex">bibTeX</a>]</center>
+#### <center>[<a href="http://arxiv.org/abs/2311.18387">arXiv</a>] [<a href="https://github.com/smhongok/inv-dpm">github</a>] [<a href="#bibtex">bibTeX</a>]</center>
 
 
 
@@ -104,3 +104,14 @@ Diffusion probabilistic models (DPMs) are a key component in modern generative m
 <a name="bibtex">
 
 ### BibTeX
+
+<pre> 
+@misc{hong2023exact,
+      title={On Exact Inversion of DPM-Solvers}, 
+      author={Seongmin Hong and Kyeonghyun Lee and Suh Yoon Jeon and Hyewon Bae and Se Young Chun},
+      year={2023},
+      eprint={2311.18387},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+</pre>
