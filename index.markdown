@@ -13,7 +13,7 @@ I am currently a PhD candidate at the [Intelligent Computational imaging Lab](ht
 
 Email: smhongok at snu.ac.kr
 
-[[Google Scholar](https://scholar.google.com/citations?user=icHnJqsAAAAJ&hl=ko&oi=ao)] [[Github](https://github.com/smhongok)] [[LinkedIn](https://www.linkedin.com/in/sm-hong/)]
+[[Google Scholar](https://scholar.google.com/citations?user=icHnJqsAAAAJ&hl=ko&oi=ao)] [[Github](https://github.com/smhongok)] [[LinkedIn](https://www.linkedin.com/in/sm-hong/)] [[CV](./files/CV_smhong.pdf)]
 
 ## Selected Publications
 ### 2023
