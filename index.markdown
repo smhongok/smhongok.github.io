@@ -16,14 +16,16 @@ Email: smhongok at snu.ac.kr
 [[Google Scholar](https://scholar.google.com/citations?user=icHnJqsAAAAJ&hl=ko&oi=ao)] [[Github](https://github.com/smhongok)] [[LinkedIn](https://www.linkedin.com/in/sm-hong/)] [[CV](./files/CV_smhong.pdf)]
 
 ## Selected Publications
-### 2023
+### 2024
 
 * #### **On Exact Inversion of DPM-Solvers**  
 
   **Seongmin Hong**,  Kyeonghyun Lee, Suh Yoon Jeon, Hyewon Bae, Se Young Chun  
-  arXiv, 2023.  
+  Conference on Computer Vision and Pattern Recognition (**CVPR**), 2024.  
   [[arXiv](https://arxiv.org/abs/2311.18387)] [[project](/inv-dpm.html)] [<a href="https://github.com/smhongok/inv-dpm">github</a>] [<a href="/bibtex.html#hong23exact">bibTeX</a>]
-  
+
+### 2023
+
 * #### **On the Robustness of Normalizing Flows for Inverse Problems in Imaging**   
 
   **Seongmin Hong**, Inbum Park, Se Young Chun  

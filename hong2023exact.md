@@ -18,7 +18,7 @@ permalink: /inv-dpm.html
 <br>
 Seoul National University, Republic of Korea
 </center>
-
+### <center> Accepted to <strong>CVPR 2024</strong> </center>
 
 
 
