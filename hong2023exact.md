@@ -43,7 +43,7 @@ Seoul National University, Republic of Korea
 | Pan et al.    | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:red; font-size:1.8em; ">✗</span> | <span style="color:red; font-size:1.8em; ">✗</span> |
 | *Ours*                      | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
 
-#### <center> We can perform exact inversion of w/o model modification regardless of whether the images were generated using high-order DPM-solvers or large classifier-free guidance. </center>
+#### <center> We can perform exact inversion w/o model modification regardless of whether the images were generated using high-order DPM-solvers or large classifier-free guidance. </center>
 
 <br><br><br><br><br>
 
