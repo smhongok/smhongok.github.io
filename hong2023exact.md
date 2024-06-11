@@ -18,12 +18,12 @@ permalink: /inv-dpm.html
 <br>
 Seoul National University, Republic of Korea
 </center>
-### <center> Accepted to <strong>CVPR 2024</strong> </center>
+### <center> <strong>CVPR 2024</strong> </center>
 
 
 
 
-#### <center>[<a href="http://arxiv.org/abs/2311.18387">arXiv</a>] [<a href="https://github.com/smhongok/inv-dpm">github</a>] [<a href="#bibtex">bibTeX</a>]</center>
+#### <center>[<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_On_Exact_Inversion_of_DPM-Solvers_CVPR_2024_paper.pdf">Paper</a>] [<a href="https://openaccess.thecvf.com/content/CVPR2024/supplemental/Hong_On_Exact_Inversion_CVPR_2024_supplemental.pdf">supp</a>] [<a href="http://arxiv.org/abs/2311.18387">arXiv</a>] [<a href="https://github.com/smhongok/inv-dpm">github</a>] [<a href="#bibtex">bibTeX</a>]</center>
 
 
 
@@ -106,12 +106,13 @@ Diffusion probabilistic models (DPMs) are a key component in modern generative m
 ### BibTeX
 
 <pre> 
-@misc{hong2023exact,
-      title={On Exact Inversion of DPM-Solvers}, 
-      author={Seongmin Hong and Kyeonghyun Lee and Suh Yoon Jeon and Hyewon Bae and Se Young Chun},
-      year={2023},
-      eprint={2311.18387},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{Hong_2024_CVPR,
+    author    = {Hong, Seongmin and Lee, Kyeonghyun and Jeon, Suh Yoon and Bae, Hyewon and Chun, Se Young},
+    title     = {On Exact Inversion of DPM-Solvers},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {7069-7078}
 }
 </pre>
+

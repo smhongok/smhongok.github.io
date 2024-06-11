@@ -22,7 +22,7 @@ Email: smhongok at snu.ac.kr
 
   **Seongmin Hong**,  Kyeonghyun Lee, Suh Yoon Jeon, Hyewon Bae, Se Young Chun  
   Conference on Computer Vision and Pattern Recognition (**CVPR**), 2024.  
-  [[arXiv](https://arxiv.org/abs/2311.18387)] [[project](/inv-dpm.html)] [<a href="https://github.com/smhongok/inv-dpm">github</a>] [<a href="/bibtex.html#hong23exact">bibTeX</a>]
+  [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_On_Exact_Inversion_of_DPM-Solvers_CVPR_2024_paper.pdf">Paper</a>] [<a href="https://openaccess.thecvf.com/content/CVPR2024/supplemental/Hong_On_Exact_Inversion_CVPR_2024_supplemental.pdf">supp</a>] [[arXiv](https://arxiv.org/abs/2311.18387)] [[project](/inv-dpm.html)] [<a href="https://github.com/smhongok/inv-dpm">github</a>] [<a href="/bibtex.html#Hong_2024_CVPR">bibTeX</a>]
 
 ### 2023
 
