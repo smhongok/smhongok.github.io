@@ -91,6 +91,12 @@ Diffusion probabilistic models (DPMs) are a key component in modern generative m
 
 
 
+<p align="center">
+  <img src="files/hong2023exact/fig_abs.png"  width="800" >
+</p>
+
+
+
 ### References
 
 - Bram Wallace, Akash Gokul, and Nikhil Naik. EDICT: Exact Diffusion Inversion via Coupled Transformations. In CVPR, pages 22532–22541, 2023.
@@ -115,4 +121,3 @@ Diffusion probabilistic models (DPMs) are a key component in modern generative m
     pages     = {7069-7078}
 }
 </pre>
-
