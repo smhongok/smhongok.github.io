@@ -18,9 +18,16 @@ Email: smhongok at snu.ac.kr
 ## Selected Publications
 ### 2024
 
+* #### **Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing**  
+
+  **Seongmin Hong**, Jaehyeok Bae, Jongho Lee, Se Young Chun  
+  European Conference on Computer Vision (**ECCV**), 2024.  
+
+  
+
 * #### **On Exact Inversion of DPM-Solvers**  
 
-  **Seongmin Hong**,  Kyeonghyun Lee, Suh Yoon Jeon, Hyewon Bae, Se Young Chun  
+  **Seongmin Hong**, Kyeonghyun Lee, Suh Yoon Jeon, Hyewon Bae, Se Young Chun  
   Conference on Computer Vision and Pattern Recognition (**CVPR**), 2024.  
   [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_On_Exact_Inversion_of_DPM-Solvers_CVPR_2024_paper.pdf">Paper</a>] [<a href="https://openaccess.thecvf.com/content/CVPR2024/supplemental/Hong_On_Exact_Inversion_CVPR_2024_supplemental.pdf">supp</a>] [[arXiv](https://arxiv.org/abs/2311.18387)] [[project](/inv-dpm.html)] [<a href="https://github.com/smhongok/inv-dpm">github</a>] [<a href="/bibtex.html#Hong_2024_CVPR">bibTeX</a>]
 
@@ -31,6 +38,8 @@ Email: smhongok at snu.ac.kr
   **Seongmin Hong**, Inbum Park, Se Young Chun  
   International Conference on Computer Vision (**ICCV**), 2023.  
   [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Hong_On_the_Robustness_of_Normalizing_Flows_for_Inverse_Problems_in_ICCV_2023_paper.pdf">Paper</a>] [<a href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Hong_On_the_Robustness_ICCV_2023_supplemental.pdf">supp</a>] [[arXiv](https://arxiv.org/abs/2212.04319)] [[project](/robustness.html)] [<a href="https://github.com/smhongok/robustNF">github</a>] [<a href="/bibtex.html#hong23robustness">bibTeX</a>]
+  
+  
 
 
 * #### **Neural Diffeomorphic Non-uniform B-spline Flows**  
@@ -38,6 +47,8 @@ Email: smhongok at snu.ac.kr
   **Seongmin Hong**,  Se Young Chun  
   Thirty-Seventh AAAI Conference on Artificial Intelligence (**AAAI**), 2023.  
   [[Paper](https://ojs.aaai.org/index.php/AAAI/article/view/26441)][[arXiv](https://arxiv.org/abs/2304.04555)] [[project](/nubsf.html)] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="/bibtex.html#hong23neural">bibTeX</a>]
+
+  
 
 * #### **Advanced direction of arrival estimation using step-learnt iterative soft-thresholding for frequency-modulated continuous wave multiple-input multiple-output radar**   
 **Seongmin Hong**, Seong-Cheol Kim, Seongwook Lee  
