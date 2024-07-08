@@ -21,7 +21,9 @@ Email: smhongok at snu.ac.kr
 * #### **Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing**  
 
   **Seongmin Hong**, Jaehyeok Bae, Jongho Lee, Se Young Chun  
-  European Conference on Computer Vision (**ECCV**), 2024.  
+  European Conference on Computer Vision (**ECCV**), 2024. 
+
+  [[project](/ada-sel.html)]
 
   
 
