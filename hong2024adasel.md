@@ -20,19 +20,7 @@ Seoul National University, Republic of Korea
 
 ### <center> <strong>Accepted to ECCV 2024</strong> </center>
 
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  },
-  svg: {
-    fontCache: 'global'
-  }
-};
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
+Contents will be added after the camera-ready version is released.
 
 ### Abstract
 
