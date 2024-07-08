@@ -4,7 +4,6 @@
 
 layout: default
 permalink: /ada-sel.html
-
 ---
 
 ## <center>  Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing</center>
@@ -21,10 +20,21 @@ Seoul National University, Republic of Korea
 
 ### <center> <strong>Accepted to ECCV 2024</strong> </center>
 
-
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 
 ### Abstract
 
 Compressed sensing (CS) has emerged to overcome the inefficiency of Nyquist sampling. However, traditional optimization-based reconstruction is slow and can not yield an exact image in practice. Deep learning-based reconstruction has been a promising alternative to optimization-based reconstruction, outperforming it in accuracy and computation speed. Finding an efficient sampling method with deep learning-based reconstruction, especially for Fourier CS remains a challenge. Existing joint optimization of sampling-reconstruction works ($\mathcal{H}_1$) optimize the sampling mask but have low potential as it is not adaptive to each data point. Adaptive sampling ($\mathcal{H}_2$) has also disadvantages of difficult optimization and Pareto sub-optimality. Here, we propose a novel adaptive selection of sampling-reconstruction ($\mathcal{H}_{1.5}$) framework that selects the best sampling mask and reconstruction network for each input data. We provide theorems that our method has a higher potential than $\mathcal{H}_1$ and effectively solves the Pareto sub-optimality problem in sampling-reconstruction by using separate reconstruction networks for different sampling masks. To select the best sampling mask, we propose to quantify the high-frequency Bayesian uncertainty of the input, using a super-resolution space generation model. Our method outperforms joint optimization of sampling-reconstruction ($\mathcal{H}_1$) and adaptive sampling ($\mathcal{H}_2$) by achieving significant improvements on several Fourier CS problems.
-
 
