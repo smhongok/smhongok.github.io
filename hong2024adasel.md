@@ -80,12 +80,12 @@ Our **Adaptive selection of Sampling-Reconstruction** (H<sub>1.5</sub>) is fanta
 
 In detail, ours have these advantages over prior works.
 
-<table style="width: 80%; border: 1px solid black; border-collapse: collapse;">
+<table style="width: 70%; border: 1px solid black; border-collapse: collapse;">
     <tr>
         <th style="width: 25%; font-size:0.9em;"> </th>
-        <th style="width: 25%; font-size:0.9em;">Adaptive <br> to input <br> k</th>
-        <th style="width: 25%; font-size:0.9em;">Backprop to <br> a continuous <br> space</th>
-        <th style="width: 25%; font-size:0.9em;">Parato <br> optimal <br> θ</th>
+        <th style="width: 25%; font-size:0.9em;">Adaptive to input k</th>
+        <th style="width: 25%; font-size:0.9em;">Backprop to a continuous space</th>
+        <th style="width: 25%; font-size:0.9em;">Parato optimal θ</th>
     </tr>
     <tr>
         <td style="font-size:0.9em;">Joint optimization <br>(H<sub>1</sub>)</td>
