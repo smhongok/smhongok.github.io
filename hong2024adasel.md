@@ -6,7 +6,17 @@ layout: default
 permalink: /ada-sel.html
 ---
 
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Example</title>
+    <style>
+        /* 컬럼 헤딩 글씨 크기 설정 */
+        th {
+            font-size: 1.2em; /* 원래 크기보다 작게 설정 */
+        }
+    </style>
+</head>
 
 ## <center>  Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing</center>
 
@@ -28,9 +38,7 @@ Seoul National University, Republic of Korea
 
 <br><br><br><br><br>
 
-
-
-#### Goal
+## Goal
 
 *Let’s find the best sampling mask for each input adaptive in Fourier compressed sensing!*
 
@@ -38,7 +46,7 @@ Seoul National University, Republic of Korea
 
 
 
-#### Prior work vs Ours
+## Prior work vs Ours
 
 There are two types of prior works. <br>
 
@@ -72,21 +80,21 @@ Our **Adaptive selection of Sampling-Reconstruction** (H<sub>1.5</sub>) is fanta
 
 In detail, ours have these advantages over prior works.
 
-|                                          | Adaptive <br> to input k                              | Backprop to a  <br>continuous space                   | Parato <br>optimal θ                                  |
-| ---------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| Joint optimization (H<sub>1</sub>)       | <span style="color:red; font-size:1.8em; ">✗</span>   | <span style="color:red; font-size:1.8em; ">✗</span>   | <span style="color:green; font-size:1.8em; ">✔</span> |
-| Adaptive sampling (H<sub>2</sub>)        | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:red; font-size:1.8em; ">✗</span>   | <span style="color:red; font-size:1.8em; ">✗</span>   |
-| **Adaptive Selection (H<sub>1.5</sub>)** | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
+|                                               | <span style="font-size:0.6em;">Adaptive <br>to input <br>k </span>                            |  <span style="font-size:0.6em;">Backprop to <br/>a continuous<br/>space </span>              | <span style="font-size:0.6em;">Parato <br>optimal <br/>θ </span>                              |
+| --------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| Joint optimization <br/>(H<sub>1</sub>)       | <span style="color:red; font-size:1.8em; ">✗</span>   | <span style="color:red; font-size:1.8em; ">✗</span>   | <span style="color:green; font-size:1.8em; ">✔</span> |
+| Adaptive sampling <br/>(H<sub>2</sub>)        | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:red; font-size:1.8em; ">✗</span>   | <span style="color:red; font-size:1.8em; ">✗</span>   |
+| **Adaptive Selection <br/>(H<sub>1.5</sub>)** | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> | <span style="color:green; font-size:1.8em; ">✔</span> |
 
 <br><br><br><br><br>
 
-#### Method
+## Method
 
  <p align="center">
   <img src="files/hong2024adasel/2.png"  width="500" >
 </p>
 
-Our method is:<br>
+Our method does:<br>
 
 1. Acquire Low-frequency region first
 2. Using SR space generation model, quantify the HF Bayesian uncertainty
@@ -94,7 +102,7 @@ Our method is:<br>
 
 <br><br><br><br><br>
 
-#### Theory
+## Theory
 
 Why is our model better than prior works? We can prove it:
 
@@ -108,7 +116,7 @@ Why is our model better than prior works? We can prove it:
 
 <br><br><br><br><br>
 
-#### Results
+## Results
 
  <p align="center">
   <img src="files/hong2024adasel/3.png"  width="500" >
@@ -124,7 +132,7 @@ and in compressed sensing MRI (8x)!
 
 <br><br><br><br><br>
 
-### Abstract
+## Abstract
 
 Compressed sensing (CS) has emerged to overcome the inefficiency of Nyquist sampling. However, traditional optimization-based reconstruction is slow and can not yield an exact image in practice. Deep learning-based reconstruction has been a promising alternative to optimization-based reconstruction, outperforming it in accuracy and computation speed. Finding an efficient sampling method with deep learning-based reconstruction, especially for Fourier CS remains a challenge. Existing joint optimization of sampling-reconstruction works (H<sub>1</sub>) optimize the sampling mask but have low potential as it is not adaptive to each data point. Adaptive sampling (H<sub>2</sub>) has also disadvantages of difficult optimization and Pareto sub-optimality. Here, we propose a novel adaptive selection of sampling-reconstruction (H<sub>1.5</sub>) framework that selects the best sampling mask and reconstruction network for each input data. We provide theorems that our method has a higher potential than H<sub>1</sub> and effectively solves the Pareto sub-optimality problem in sampling-reconstruction by using separate reconstruction networks for different sampling masks. To select the best sampling mask, we propose to quantify the high-frequency Bayesian uncertainty of the input, using a super-resolution space generation model. Our method outperforms joint optimization of sampling-reconstruction (H<sub>1</sub>) and adaptive sampling (H<sub>2</sub>) by achieving significant improvements on several Fourier CS problems.
 
@@ -134,7 +142,7 @@ Compressed sensing (CS) has emerged to overcome the inefficiency of Nyquist samp
 
 <a name="bibtex">
 
-### BibTeX
+## BibTeX
 
 <pre> 
 @InProceedings{Hong_2024_ECCV,
@@ -145,4 +153,3 @@ Compressed sensing (CS) has emerged to overcome the inefficiency of Nyquist samp
     year      = {2024},
 }
 </pre>
-
