@@ -81,7 +81,7 @@ Our **Adaptive selection of Sampling-Reconstruction** (H<sub>1.5</sub>) is fanta
 In detail, ours have these advantages over prior works.
 
 |                                              | <span style="font-size:0.9em;">Adaptive <br>to input <br>k </span> | <span style="font-size:0.9em;">Backprop to <br>a continuous<br>space </span> | <span style="font-size:0.9em;">Parato <br>optimal <br>θ </span> |
-| -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ----- | ----- | ----- | ----- |
 | Joint optimization <br>(H<sub>1</sub>)       | <span style="color:red; font-size:1.8em; ">✗</span>          | <span style="color:red; font-size:1.8em; ">✗</span>          | <span style="color:green; font-size:1.8em; ">✔</span>        |
 | Adaptive sampling <br>(H<sub>2</sub>)        | <span style="color:green; font-size:1.8em; ">✔</span>        | <span style="color:red; font-size:1.8em; ">✗</span>          | <span style="color:red; font-size:1.8em; ">✗</span>          |
 | **Adaptive Selection <br>(H<sub>1.5</sub>)** | <span style="color:green; font-size:1.8em; ">✔</span>        | <span style="color:green; font-size:1.8em; ">✔</span>        | <span style="color:green; font-size:1.8em; ">✔</span>        |
