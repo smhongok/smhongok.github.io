@@ -20,7 +20,7 @@ permalink: /ada-sel.html
 
 ## <center>  Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing</center>
 
-#### <center> <a href="">Seongmin Hong</a><sup>1</sup>, <a href="https://jaehyeokbae.me/">Jaehyeok Bae</a><sup>1</sup>, <a href="https://list.snu.ac.kr/jongho-lee">Jongho Lee</a><sup>1,2,\*</sup>, <a href="https://icl.snu.ac.kr/pi">Se Young Chun</a><sup>1,2,3,\*</sup></center>
+#### <center> <a href="">Seongmin Hong</a><sup>1</sup>, <a href="https://jaehyeokbae.me/">Jaehyeok Bae</a><sup>1</sup>, <a href="https://list.snu.ac.kr/jongho-lee">Jongho Lee</a><sup>1,2,*</sup>, <a href="https://icl.snu.ac.kr/pi">Se Young Chun</a><sup>1,2,3,*</sup></center>
 
 <center>
 <sup>1</sup>Dept. of Electrical and Computer Engineering,   
@@ -80,11 +80,33 @@ Our **Adaptive selection of Sampling-Reconstruction** (H<sub>1.5</sub>) is fanta
 
 In detail, ours have these advantages over prior works.
 
-|                                              | <span style="font-size:0.9em;">Adaptive <br>to input <br>k </span> | <span style="font-size:0.9em;">Backprop to <br>a continuous<br>space </span> | <span style="font-size:0.9em;">Parato <br>optimal <br>θ </span> |
-| ----- | ----- | ----- | ----- |
-| Joint optimization <br>(H<sub>1</sub>)       | <span style="color:red; font-size:1.8em; ">✗</span>          | <span style="color:red; font-size:1.8em; ">✗</span>          | <span style="color:green; font-size:1.8em; ">✔</span>        |
-| Adaptive sampling <br>(H<sub>2</sub>)        | <span style="color:green; font-size:1.8em; ">✔</span>        | <span style="color:red; font-size:1.8em; ">✗</span>          | <span style="color:red; font-size:1.8em; ">✗</span>          |
-| **Adaptive Selection <br>(H<sub>1.5</sub>)** | <span style="color:green; font-size:1.8em; ">✔</span>        | <span style="color:green; font-size:1.8em; ">✔</span>        | <span style="color:green; font-size:1.8em; ">✔</span>        |
+<table style="width: 80%; border: 1px solid black; border-collapse: collapse;">
+    <tr>
+        <th style="width: 25%; font-size:0.9em;"> </th>
+        <th style="width: 25%; font-size:0.9em;">Adaptive <br> to input <br> k</th>
+        <th style="width: 25%; font-size:0.9em;">Backprop to <br> a continuous <br> space</th>
+        <th style="width: 25%; font-size:0.9em;">Parato <br> optimal <br> θ</th>
+    </tr>
+    <tr>
+        <td style="font-size:0.9em;">Joint optimization <br>(H<sub>1</sub>)</td>
+        <td><span style="color:red; font-size:1.8em;">✗</span></td>
+        <td><span style="color:red; font-size:1.8em;">✗</span></td>
+        <td><span style="color:green; font-size:1.8em;">✔</span></td>
+    </tr>
+    <tr>
+        <td style="font-size:0.9em;">Adaptive sampling <br>(H<sub>2</sub>)</td>
+        <td><span style="color:green; font-size:1.8em;">✔</span></td>
+        <td><span style="color:red; font-size:1.8em;">✗</span></td>
+        <td><span style="color:red; font-size:1.8em;">✗</span></td>
+    </tr>
+    <tr>
+        <td style="font-size:0.9em;"><strong>Adaptive Selection <br>(H<sub>1.5</sub>)</strong></td>
+        <td><span style="color:green; font-size:1.8em;">✔</span></td>
+        <td><span style="color:green; font-size:1.8em;">✔</span></td>
+        <td><span style="color:green; font-size:1.8em;">✔</span></td>
+    </tr>
+</table>
+
 
 <br><br><br><br><br>
 
