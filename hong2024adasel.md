@@ -32,7 +32,7 @@ Seoul National University, Republic of Korea
 
 ### <center> <strong>Accepted to ECCV 2024</strong> </center>
 
-#### <center> [[arXiv](https://arxiv.org/abs/2409.11738)] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="#bibtex">bibTeX</a>] </center>
+#### <center> [<a href="https://arxiv.org/abs/2409.11738">arXiv</a>] [<a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">github</a>] [<a href="#bibtex">bibTeX</a>] </center>
 
 
 
