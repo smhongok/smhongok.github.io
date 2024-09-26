@@ -18,12 +18,19 @@ Email: smhongok at snu.ac.kr
 ## Selected Publications
 ### 2024
 
+* #### **Gradient-free Decoder Inversion in Latent Diffusion Models**  
+
+  **Seongmin Hong**, Kyeonghyun Lee, Suh Yoon Jeon, Ernest K. Ryu, Se Young Chun
+  Neural Information Processing Systems (**NeurIPS**), 2024. 
+
+  
+
 * #### **Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing**  
 
   **Seongmin Hong**, Jaehyeok Bae, Jongho Lee, Se Young Chun  
   European Conference on Computer Vision (**ECCV**), 2024. 
 
-  [[project](/ada-sel.html)]
+  [[arXiv](https://arxiv.org/abs/2409.11738)] [[project](/ada-sel.html)] [<a href="https://github.com/smhongok/ada-sel">github</a>] [<a href="/bibtex.html#Hong_2024_ECCV">bibTeX</a>]
 
   
 

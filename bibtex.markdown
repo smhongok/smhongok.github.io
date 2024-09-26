@@ -5,6 +5,13 @@
 #layout: page
 permalink: /bibtex.html
 ---
+    @InProceedings{Hong_2024_ECCV,
+        author    = {Hong, Seongmin and Bae, Jaehyeok and Lee, Jongho and Chun, Se Young},
+        title     = {Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing},
+        booktitle = {European Conference on Computer Vision},
+        month     = {October},
+        year      = {2024},
+    }
     @InProceedings{Hong_2024_CVPR,
         author    = {Hong, Seongmin and Lee, Kyeonghyun and Jeon, Suh Yoon and Bae, Hyewon and Chun, Se Young},
         title     = {On Exact Inversion of DPM-Solvers},
