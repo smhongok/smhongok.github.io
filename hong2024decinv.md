@@ -29,7 +29,7 @@ permalink: /dec-inv.html
 
 The project page will be updated soon.
 
-<img src="./files/hong2024decinv/dec-inv.gif" alt="GIF file" width="853" height="480">
+<img src="./files/hong2024decinv/dec-inv.gif" alt="GIF file">
 
 <br><br><br><br><br>
 
