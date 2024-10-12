@@ -20,9 +20,10 @@ Email: smhongok at snu.ac.kr
 
 * #### **Gradient-free Decoder Inversion in Latent Diffusion Models**  
 
-  **Seongmin Hong**, Kyeonghyun Lee, Suh Yoon Jeon, Ernest K. Ryu, Se Young Chun
+  **Seongmin Hong**, Kyeonghyun Lee, Suh Yoon Jeon, Ernest K. Ryu, Se Young Chun 
+  Accepted to Neural Information Processing Systems (**NeurIPS**), 2024. 
 
-  Neural Information Processing Systems (**NeurIPS**), 2024. 
+  [[arXiv](https://arxiv.org/abs/2409.18442)] [[project](/dec-inv.html)] [<a href="https://github.com/smhongok/dec-inv">github</a>] [<a href="/bibtex.html#hong2024gradient">bibTeX</a>]
 
   
 

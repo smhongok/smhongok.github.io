@@ -5,6 +5,15 @@
 #layout: page
 permalink: /bibtex.html
 ---
+    @misc{hong2024gradient,
+          title={Gradient-free Decoder Inversion in Latent Diffusion Models}, 
+          author={Seongmin Hong and Suh Yoon Jeon and Kyeonghyun Lee and Ernest K. Ryu and Se Young Chun},
+          year={2024},
+          eprint={2409.18442},
+          archivePrefix={arXiv},
+          primaryClass={cs.LG},
+          url={https://arxiv.org/abs/2409.18442}, 
+    }
     @InProceedings{Hong_2024_ECCV,
         author    = {Hong, Seongmin and Bae, Jaehyeok and Lee, Jongho and Chun, Se Young},
         title     = {Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing},
