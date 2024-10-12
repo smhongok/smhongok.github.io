@@ -7,7 +7,7 @@ permalink: /dec-inv.html
 
 ---
 
-## <center>  **Gradient-free Decoder Inversion in Latent Diffusion Models**</center>
+## <center>Gradient-free Decoder Inversion in Latent Diffusion Models</center>
 
 #### <center> <a href="">Seongmin Hong</a><sup>1</sup>, <a href="https://www.linkedin.com/in/suhyoonjeon">Suh Yoon Jeon</a><sup>1</sup>, <a href="https://www.linkedin.com/in/khlee0192">Kyeonghyun Lee</a><sup>1</sup>, <a href="https://ernestryu.com/">Ernest K. Ryu</a><sup>2</sup>, <a href="https://icl.snu.ac.kr/pi">Se Young Chun</a><sup>1,3</sup></center>
 
@@ -26,15 +26,64 @@ permalink: /dec-inv.html
 
 #### <center>[<a href="http://arxiv.org/abs/2409.18442">arXiv</a>] [<a href="https://github.com/smhongok/dec-inv">github</a>] [<a href="#bibtex">bibTeX</a>]</center>
 
-
+### <center>Main Idea</center>
 
 <p align="center">
     <img src="./files/hong2024decinv/dec-inv.gif" alt="GIF file">
 </p>
+<br><br><br><br><br>
 
-The project page will be updated soon.
+### <center>Main Contribution</center>
+
+<p align="center">
+    <img src="./files/hong2024decinv/10p.gif" alt="GIF file" height=360>
+</p>
 
 <br><br><br><br><br>
+
+### <center> Convergence Analysis </center>
+
+<p align="center">
+    <figure>
+        <img src="./files/hong2024decinv/thm1.png" alt="GIF file" >
+    </figure>
+</p>
+
+<center>Our method provably converges.</center>
+
+<br>
+
+<br>
+
+<br>
+
+<p align="center">
+    <figure>
+        <img src="./files/hong2024decinv/km.png" alt="png file" >
+    </figure>
+</p>
+
+<center>Moreover, with momentum (inertial KM iteration),</center>
+
+<br>
+
+<br>
+
+<p align="center">
+    <figure>
+        <img src="./files/hong2024decinv/thm2.png" alt="png file" >
+    </figure>
+</p>
+
+<center>It also provably converges.</center>
+
+<br>
+
+<br>
+
+<br>
+
+
 
 ### Abstract
 
@@ -43,6 +92,10 @@ In latent diffusion models (LDMs), denoising diffusion process efficiently takes
 
 
 <br><br>
+
+<br><br><br>
+
+
 
 <a name="bibtex">
 
