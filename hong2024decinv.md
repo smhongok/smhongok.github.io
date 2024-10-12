@@ -12,11 +12,12 @@ permalink: /dec-inv.html
 #### <center> <a href="">Seongmin Hong</a><sup>1</sup>, <a href="https://www.linkedin.com/in/suhyoonjeon">Suh Yoon Jeon</a><sup>1</sup>, <a href="https://www.linkedin.com/in/khlee0192">Kyeonghyun Lee</a><sup>1</sup>, <a href="https://ernestryu.com/">Ernest K. Ryu</a><sup>2</sup>, <a href="https://icl.snu.ac.kr/pi">Se Young Chun</a><sup>1,3</sup></center>
 
 <center>
-<sup>1</sup>Dept. of Electrical and Computer Engineering, <sup>3</sup>INMC \& IPAI, Seoul National University     
+<sup>1</sup>Dept. of Electrical and Computer Engineering, <sup>3</sup>INMC & IPAI, Seoul National University     
 <br>
 <sup>2</sup>Dept. of Mathematics, University of California, Los Angeles   
 <br>
 </center>
+
 
 ### <center>Accepted to <strong>NeurIPS 2024</strong> </center>
 
@@ -27,9 +28,11 @@ permalink: /dec-inv.html
 
 
 
-The project page will be updated soon.
+<p align="center">
+    <img src="./files/hong2024decinv/dec-inv.gif" alt="GIF file">
+</p>
 
-<img src="./files/hong2024decinv/dec-inv.gif" alt="GIF file">
+The project page will be updated soon.
 
 <br><br><br><br><br>
 
