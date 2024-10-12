@@ -29,6 +29,8 @@ permalink: /dec-inv.html
 
 The project page will be updated soon.
 
+<img src="./files/hong2024decinv/dec-inv.gif" alt="GIF file" width="853" height="480">
+
 <br><br><br><br><br>
 
 ### Abstract
@@ -54,4 +56,3 @@ In latent diffusion models (LDMs), denoising diffusion process efficiently takes
       url={https://arxiv.org/abs/2409.18442}, 
 }
 </pre>
-
