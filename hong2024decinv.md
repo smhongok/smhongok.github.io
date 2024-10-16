@@ -90,7 +90,33 @@ permalink: /dec-inv.html
 
 <br>
 
+## <center> Results </center>
 
+<br>
+
+<p align="center">
+    <figure>
+        <img src="./files/hong2024decinv/results.png" alt="png file" >
+    </figure>
+</p>
+
+Our gradient-free decoder inversion is:
+
+- **Fast**: up to 5× faster, 1.89 s vs 9.51 s to achieve -16.4 dB (InstaFlow) 
+
+- **Accurate**: up to 2.3 dB lower, -21.37 dB vs -19.06 dB in 25.1 s (LaVie) 
+
+- **Memory-efficient**: up to *89%* can be saved, 7.13 GB vs 64.7 GB (Lavie) 
+
+- **Precision-flexible**: 16-bit vs 32-bit (all)
+
+<br>
+
+<br>
+
+<br>
+
+<br>
 
 ## <center>Abstract</center>
 
