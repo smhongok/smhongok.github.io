@@ -16,19 +16,19 @@ permalink: /lottery.html
 				//and displayed on the page.
 				//If all three images match, alert the user of a win.
 				
-				var money = parseInt(document.getElementsByName('money')[0].value);
-				var bet = parseInt(document.getElementsByName('bet')[0].value);
-				var slotImages = ["bar.jpg", "cherry.jpg", "donut.jpg", "lemon.jpg"];
+				//var money = parseInt(document.getElementsByName('money')[0].value);
+				//var bet = parseInt(document.getElementsByName('bet')[0].value);
+				var slotImages = ["bbae.png", "bbe.png", "ru.png", "ro.png"];
 				
-				if (money > 0) {
-					document.getElementsByName('money')[0].value = money - bet;
-					//keys: 0=bar, 1=cherry, 2=donut, 3=lemon
+				if (1) {
+					//document.getElementsByName('money')[0].value = money - bet;
+					//keys: 0=bbae, 1=bbe, 2=ru, 3=ro
 					var slotImage1 = Math.floor((Math.random() * 4));
 					var slotImage2 = Math.floor((Math.random() * 4));
 					var slotImage3 = Math.floor((Math.random() * 4));
-					if (slotImage1 == slotImage2 && slotImage2 == slotImage3) {
-                        if (Math.random()<0.99) {
-                        	slotImage3 = 3 - slotImage3;
+					if (slotImage1 == 0 && slotImage2 == 0 && slotImage3 == 3) {
+                        if (Math.random()<0.90) {
+                        	slotImage3 = 2;
                         }
 					} 
 				
@@ -36,7 +36,7 @@ permalink: /lottery.html
 					document.getElementById('SlotImage2').src = slotImages[slotImage2];
 					document.getElementById('SlotImage3').src = slotImages[slotImage3];
 			
-					CheckWinner(slotImage1,slotImage2,slotImage3,money,bet);
+					CheckWinner(slotImage1,slotImage2,slotImage3);
 				}
 				else {
 					//out of money
@@ -44,48 +44,14 @@ permalink: /lottery.html
 				}	
 			}
 			
-			function CheckWinner(x,y,z,money,bet) {
-				if (x == y && x == z) {
-					document.getElementsByName('money')[0].value = money + (13 * bet);
+			function CheckWinner(x,y,z) {
+				if (x == 0 && y == 0 && z == 3) {
 					alert('YOU WIN!');
 				}
 			}
 			
-			function checkBet() {
-				var bet = parseInt(document.getElementsByName('bet')[0].value)
-				//check if the user entered a valid numerical bet
-				if (isNaN(bet)){
-					//bet is not a number
-					alert('Please enter bet as a numerical value.');
-				}
-				else {
-					if (bet <= 0){
-						// bet too low
-						alert('Your bet is too low.');
-					}
-					else{
-						if(bet > parseInt(document.getElementsByName('money')[0].value)){
-							//bet too large
-							alert('You do not have enough money to place a bet this large.');
-						}		
-					}
-				}
-			}
+
 			
-			function checkMoney() {
-				var money = parseInt(document.getElementsByName('money')[0].value)
-				//check if the user entered a valid numerical value for money
-				if (isNaN(money)){
-					//money is not a number
-					alert('Please enter money as a numerical value.');
-				}
-				else {
-					if (money <= 0){
-						// money entered was too low
-						alert('Please add a valid amount of money to the game.');
-					}
-				}
-			}
 		</script>	
 	</Head>
 	
@@ -99,16 +65,6 @@ permalink: /lottery.html
 			<tr>
 				<td></td>
 				<td><input type="button" onclick="DoSpin()" value="Click To Spin"></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Money:</td>
-				<td><input type="text" onchange="checkMoney()" style="width: 100px" name="money" value="20"></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Bet:</td>
-				<td><input type="text" onchange="checkBet()" style="width: 100px" name="bet" value="1"></td>
 				<td></td>
 			</tr>
 		</table>
