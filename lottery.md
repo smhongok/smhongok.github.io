@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-permalink: /lottery.html
+permalink: /pepero.html
 
 ---
 <html>
@@ -58,9 +58,9 @@ permalink: /lottery.html
 	<Body>
 		<table align="center">
 			<tr> 
-				<td><img id="SlotImage1" src="bar.jpg" alt="Slot Image #1" style="Width:102px; Height:132px;"></td>
-				<td><img id="SlotImage2" src="bar.jpg" alt="Slot Image #2" style="Width:102px; Height:132px;"></td>
-				<td><img id="SlotImage3" src="bar.jpg" alt="Slot Image #3" style="Width:102px; Height:132px;"></td>
+				<td><img id="SlotImage1" src="bbe.png" alt="Slot Image #1" style="Width:102px; Height:132px;"></td>
+				<td><img id="SlotImage2" src="bbae.png" alt="Slot Image #2" style="Width:102px; Height:132px;"></td>
+				<td><img id="SlotImage3" src="ro.png" alt="Slot Image #3" style="Width:102px; Height:132px;"></td>
 			</tr>
 			<tr>
 				<td></td>
