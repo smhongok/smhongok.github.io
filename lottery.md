@@ -26,6 +26,9 @@ permalink: /lottery.html
 					var slotImage1 = Math.floor((Math.random() * 4));
 					var slotImage2 = Math.floor((Math.random() * 4));
 					var slotImage3 = Math.floor((Math.random() * 4));
+					if (slotImage1 == slotImage2 && slotImage2 == slotImage3) {
+					slotImage3 = 3 - slotImage3;
+					} 
 				
 					document.getElementById('SlotImage1').src = slotImages[slotImage1];
 					document.getElementById('SlotImage2').src = slotImages[slotImage2];
