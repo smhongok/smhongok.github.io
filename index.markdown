@@ -23,7 +23,7 @@ Email: smhongok at snu.ac.kr
   **Seongmin Hong**, Kyeonghyun Lee, Suh Yoon Jeon, Ernest K. Ryu, Se Young Chun  
   Accepted to Neural Information Processing Systems (**NeurIPS**), 2024. 
 
-  [[arXiv](https://arxiv.org/abs/2409.18442)] [[project](/dec-inv.html)] [<a href="https://github.com/smhongok/dec-inv">github</a>] [<a href="/bibtex.html#hong2024gradient">bibTeX</a>]
+  [[arXiv](https://arxiv.org/abs/2409.18442)] [[project](/dec-inv.html)] [<a href="https://recorder-v3.slideslive.com/#/share?share=94209&s=10070c25-7055-403c-bd99-5bfc52ab749d">video</a>] [<a href="https://github.com/smhongok/dec-inv">github</a>] [<a href="/bibtex.html#hong2024gradient">bibTeX</a>]
 
   
 
@@ -32,7 +32,7 @@ Email: smhongok at snu.ac.kr
   **Seongmin Hong**, Jaehyeok Bae, Jongho Lee, Se Young Chun  
   European Conference on Computer Vision (**ECCV**), 2024. 
 
-  [[arXiv](https://arxiv.org/abs/2409.11738)] [[project](/ada-sel.html)] [<a href="https://github.com/smhongok/ada-sel">github</a>] [<a href="/bibtex.html#Hong_2024_ECCV">bibTeX</a>]
+  [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08236.pdf">Paper</a>] [[arXiv](https://arxiv.org/abs/2409.11738)] [[project](/ada-sel.html)] [<a href="https://github.com/smhongok/ada-sel">github</a>] [<a href="/bibtex.html#Hong_2024_ECCV">bibTeX</a>]
 
   
 
