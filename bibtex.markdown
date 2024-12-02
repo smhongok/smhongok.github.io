@@ -14,7 +14,7 @@ permalink: /bibtex.html
           primaryClass={cs.LG},
           url={https://arxiv.org/abs/2409.18442}, 
     }
-    @inproceedings{hong2025adaptive,
+    @inproceedings{hong2024adaptive,
       title={Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing},
       author={Hong, Seongmin and Bae, Jaehyeok and Lee, Jongho and Chun, Se Young},
       booktitle={European Conference on Computer Vision},
