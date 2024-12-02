@@ -167,7 +167,7 @@ Compressed sensing (CS) has emerged to overcome the inefficiency of Nyquist samp
 ## BibTeX
 
 <pre> 
-@inproceedings{hong2025adaptive,
+@inproceedings{hong2024adaptive,
   title={Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing},
   author={Hong, Seongmin and Bae, Jaehyeok and Lee, Jongho and Chun, Se Young},
   booktitle={European Conference on Computer Vision},
