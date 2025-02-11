@@ -19,11 +19,11 @@ permalink: /dec-inv.html
 </center>
 
 
-### <center>Accepted to <strong>NeurIPS 2024</strong> </center>
+### <center><strong>NeurIPS 2024</strong> </center>
 
 
 
-#### <center>[<a href="http://arxiv.org/abs/2409.18442">arXiv</a>] [<a href="https://recorder-v3.slideslive.com/#/share?share=94209&s=10070c25-7055-403c-bd99-5bfc52ab749d">video</a>] [<a href="https://github.com/smhongok/dec-inv">github</a>] [<a href="#bibtex">bibTeX</a>]</center>
+#### <center>[<a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/970f59b22f4c72aec75174aae63c7459-Abstract-Conference.html">Paper</a>] [<a href="http://arxiv.org/abs/2409.18442">arXiv</a>] [<a href="https://recorder-v3.slideslive.com/#/share?share=94209&s=10070c25-7055-403c-bd99-5bfc52ab749d">video</a>] [<a href="https://github.com/smhongok/dec-inv">github</a>] [<a href="#bibtex">bibTeX</a>]</center>
 
 <br>
 
