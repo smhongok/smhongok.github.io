@@ -5,14 +5,16 @@
 #layout: page
 permalink: /bibtex.html
 ---
-    @misc{hong2024gradient,
-          title={Gradient-free Decoder Inversion in Latent Diffusion Models}, 
-          author={Seongmin Hong and Suh Yoon Jeon and Kyeonghyun Lee and Ernest K. Ryu and Se Young Chun},
-          year={2024},
-          eprint={2409.18442},
-          archivePrefix={arXiv},
-          primaryClass={cs.LG},
-          url={https://arxiv.org/abs/2409.18442}, 
+    @inproceedings{hong2024gradient,
+     author = {Hong, Seongmin and Jeon, Suh Yoon and Lee, Kyeonghyun and Ryu, Ernest K. and Chun, Young},
+     booktitle = {Advances in Neural Information Processing Systems},
+     editor = {A. Globerson and L. Mackey and D. Belgrave and A. Fan and U. Paquet and J. Tomczak and C. Zhang},
+     pages = {82982--83007},
+     publisher = {Curran Associates, Inc.},
+     title = {Gradient-free Decoder Inversion in Latent Diffusion Models},
+     url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/970f59b22f4c72aec75174aae63c7459-Paper-Conference.pdf},
+     volume = {37},
+     year = {2024}
     }
     @inproceedings{hong2024adaptive,
       title={Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing},
