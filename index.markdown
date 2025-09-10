@@ -6,10 +6,10 @@ layout: default
 title: Seongmin Hong
 ---
 <p align="center">
-  <img src="./files/picture_hood.jpg" alt="이미지 설명" width="200pt">
+  <img src="./files/picture_grad.jpg" alt="이미지 설명" width="200pt">
 </p>
 
-I am currently a PhD candidate at the [Intelligent Computational imaging Lab](https://icl.snu.ac.kr/) (Prof. [Se Young Chun](https://icl.snu.ac.kr/pi)) in the [Department of Electrical and Computer Engineering](https://ece.snu.ac.kr/) at  [Seoul National University](https://www.snu.ac.kr/). I graduated from the same department in 2020  and decided to continue my research journey in pursuit of a doctoral degree.
+I am a postdoctoral researcher at the [Institute of New Media and Communications (INMC)](https://inmc.snu.ac.kr/en/) at Seoul National University (SNU). I recently earned my Ph.D. from the [Department of Electrical and Computer Engineering](https://ece.snu.ac.kr/) at  [Seoul National University](https://www.snu.ac.kr/), where I was part of the [Intelligent Computational imaging Lab](https://icl.snu.ac.kr/) (Prof. [Se Young Chun](https://icl.snu.ac.kr/pi)). My doctoral thesis was awarded the **Distinguished Dissertation Award**.
 
 Email: smhongok at snu.ac.kr
 
