@@ -30,7 +30,7 @@ permalink: /ada-sel.html
 Seoul National University, Republic of Korea
 </center>
 
-### <center> <strong>Accepted to ECCV 2024</strong> </center>
+### <center> <strong>ECCV 2024</strong> </center>
 
 #### <center> [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08236.pdf">Paper</a>] [<a href="https://arxiv.org/abs/2409.11738">arXiv</a>] [<a href="https://github.com/smhongok/ada-sel">github</a>] [<a href="#bibtex">bibTeX</a>] </center>
 
