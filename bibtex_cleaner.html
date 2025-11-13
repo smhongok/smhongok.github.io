@@ -1,0 +1,456 @@
+---
+layout: default
+title: BibTeX Cleaner
+permalink: /bibtex-cleaner/
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BibTeX Cleaner (웹용)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        textarea {
+            min-height: 400px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        .loading-overlay {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <script>
+        // #####################################################################
+        // 1. 설정: 학회 매핑, 제거할 필드, etc. (파이썬 코드에서 가져옴)
+        // #####################################################################
+
+        const CONFERENCE_MAP = {
+            'NeurIPS': [
+                'NeurIPS',
+                'Advances in Neural Information Processing Systems',
+                'Conference on Neural Information Processing Systems',
+                'Neural Information Processing Systems'
+            ],
+            'ICML': [
+                'ICML',
+                'International Conference on Machine Learning'
+            ],
+            'ICLR': [
+                'ICLR',
+                'International Conference on Learning Representations'
+            ],
+            'CVPR': [
+                'CVPR',
+                'IEEE Conference on Computer Vision and Pattern Recognition',
+                'Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition',
+                'IEEE/CVF Conference on Computer Vision and Pattern Recognition'
+            ],
+            'ICCV': [
+                'ICCV',
+                'IEEE International Conference on Computer Vision'
+            ],
+            'ECCV': [
+                'ECCV',
+                'European Conference on Computer Vision'
+            ],
+            'ACL': [
+                'ACL',
+                'Annual Meeting of the Association for Computational Linguistics'
+            ],
+            'WACV': [
+                'WACV',
+                'IEEE Winter Conference on Applications of Computer Vision'
+            ],
+            'AAAI': [
+                'AAAI',
+                'Association for the Advancement of Artificial Intelligence'
+            ],
+        };
+
+        const FIELDS_TO_REMOVE = ['volume', 'number', 'pages', 'month', 'publisher', 'organization'];
+
+
+        // #####################################################################
+        // 2. 문자열(학회) 감지 함수
+        // #####################################################################
+        function detectConference(booktitleOrJournal) {
+            if (!booktitleOrJournal) return null;
+
+            const lowerStr = booktitleOrJournal.toLowerCase();
+            for (const abbr in CONFERENCE_MAP) {
+                for (const pattern of CONFERENCE_MAP[abbr]) {
+                    if (lowerStr.includes(pattern.toLowerCase())) {
+                        return abbr;
+                    }
+                }
+            }
+            return null;
+        }
+
+        // #####################################################################
+        // 3. 제목에서 대문자/맨앞단어 처리 (파이썬 로직을 JS regex로 변환)
+        // #####################################################################
+        function preserveUppercaseAcronyms(title) {
+            if (!title) return title;
+
+            // 1) 맨 앞 "단어:"를 {단어}: 로 감싸기 (이미 { } 로 감싸져 있으면 제외)
+            let titleNew = title.replace(
+                /^([^\s:]+):/, 
+                (match, word) => {
+                    if (word.startsWith('{') && word.endsWith('}')) {
+                        return match; // 이미 감싸져 있음
+                    }
+                    return `{${word}}:`
+                }
+            );
+
+            // 2) 2글자 이상 연속된 대문자 약어는 {{...}}로 감싸기
+            // 단, 이미 { } 로 감싸진 부분 내부는 제외하는 로직은 JS regex로 구현이 매우 까다로워
+            // 가장 바깥쪽에 있는 대문자만 처리
+            titleNew = titleNew.replace(
+                /\b[A-Z]{2,}\b/g, 
+                (acronym) => {
+                    // 간단한 꼼수: 이미 중괄호로 감싸진 것처럼 보이는 경우(완벽하지 않음)는 스킵
+                    if (acronym.includes('{') || acronym.includes('}')) {
+                        return acronym;
+                    }
+                    return `{${acronym}}`;
+                }
+            );
+            return titleNew;
+        }
+
+        // #####################################################################
+        // 4. BibTeX 파싱 및 엔트리 추출 (단일 파일 JS용으로 간소화)
+        // #####################################################################
+
+        // 정규식을 사용하여 BibTeX 문자열을 엔트리 객체의 배열로 파싱 (매우 단순화됨)
+        function parseBibtex(bibtexStr) {
+            const entries = [];
+            // @entrytype{key, ... } 패턴을 대략적으로 찾습니다.
+            const entryRegex = /@(\w+)\s*\{\s*([^,]+),\s*([\s\S]*?)\n?\}/g;
+            let match;
+
+            while ((match = entryRegex.exec(bibtexStr)) !== null) {
+                const fullEntryText = match[0];
+                const entryType = match[1].toLowerCase();
+                const entryId = match[2].trim();
+                
+                let currentEntry = { ENTRYTYPE: entryType, ID: entryId, fields: {} };
+                
+                // 엔트리 본문에서 필드 추출
+                // field = {value} 혹은 field = "value"
+                // g 플래그를 사용하여 모든 필드를 찾습니다.
+                const fieldRegex = /^\s*([a-zA-Z0-9]+)\s*=\s*(\{[\s\S]*?\}|\"[^"]*\"|[^,]*)\s*[,}]?$/gm;
+                let fieldMatch;
+
+                // 필드 파싱을 위한 임시 문자열. fullEntryText에서 '@entry{key,' 부분을 제거합니다.
+                const body = fullEntryText.substring(fullEntryText.indexOf(match[3]));
+
+                // 필드 추출은 복잡하므로, 가장 단순한 필드 = 값 형태로만 시도합니다.
+                
+                const lines = body.split('\n');
+                let inValue = false; // 멀티라인 값을 처리하기 위한 플래그
+                let currentKey = '';
+                let currentValue = '';
+
+                for(const line of lines) {
+                    const trimmed = line.trim();
+                    if (trimmed.length === 0) continue;
+
+                    // 단순 필드 매칭 (키 = 값, 또는 키 = {값})
+                    const simpleMatch = trimmed.match(/^([a-zA-Z0-9]+)\s*=\s*([^{",\s].*)\s*[,}]?$/);
+                    const braceMatch = trimmed.match(/^([a-zA-Z0-9]+)\s*=\s*(\{[\s\S]*)\s*$/);
+                    const quoteMatch = trimmed.match(/^([a-zA-Z0-9]+)\s*=\s*(\"[^"]*)\s*$/);
+
+
+                    // 키 = {값 ...} 형태 처리
+                    if (braceMatch) {
+                        currentKey = braceMatch[1].toLowerCase();
+                        currentValue = braceMatch[2];
+                        let braceLevel = (currentValue.match(/\{/g) || []).length - (currentValue.match(/\}/g) || []).length;
+                        
+                        if (braceLevel > 0) {
+                            inValue = true;
+                        } else {
+                            // 단일 라인 값 처리
+                            currentEntry.fields[currentKey] = currentValue.slice(1, -1).trim();
+                            currentKey = '';
+                            currentValue = '';
+                            inValue = false;
+                        }
+                    } 
+                    // 키 = "값" 형태 처리
+                    else if (quoteMatch) {
+                         currentKey = quoteMatch[1].toLowerCase();
+                         currentValue = quoteMatch[2];
+                         if (currentValue.endsWith('"') && trimmed.endsWith(',')) {
+                            currentEntry.fields[currentKey] = currentValue.slice(1, -1).trim();
+                            currentKey = '';
+                            currentValue = '';
+                            inValue = false;
+                         } else {
+                            // 멀티라인 따옴표 값은 이 단순 파서로 처리 불가
+                         }
+                    }
+                    // 멀티라인 값 처리 중
+                    else if (inValue) {
+                        currentValue += '\n' + line;
+                        let braceLevel = (currentValue.match(/\{/g) || []).length - (currentValue.match(/\}/g) || []).length;
+                        if (braceLevel <= 0) {
+                            // 값 종료
+                            currentEntry.fields[currentKey] = currentValue.slice(1, -1).trim();
+                            currentKey = '';
+                            currentValue = '';
+                            inValue = false;
+                        }
+                    }
+                    // 키 = 값 (숫자, 약어) 처리
+                    else if (simpleMatch) {
+                         let key = simpleMatch[1].toLowerCase();
+                         let value = simpleMatch[2].trim().replace(/,$/, '').replace(/\}$/, '');
+                         currentEntry.fields[key] = value;
+                    }
+                }
+
+                entries.push(currentEntry);
+            }
+            return entries;
+        }
+
+        // #####################################################################
+        // 5. 엔트리 가공 로직
+        // #####################################################################
+        function processBibtexEntries(entries, keepInproceedings) {
+            const processedEntries = [];
+            for (const entry of entries) {
+                const newEntry = { ...entry, fields: { ...entry.fields } };
+                const entryType = newEntry.ENTRYTYPE.toLowerCase();
+                
+                // (1) title
+                if (newEntry.fields.title) {
+                    newEntry.fields.title = preserveUppercaseAcronyms(newEntry.fields.title);
+                }
+
+                // (2) inproceedings 처리
+                let confAbbr = null;
+                let isKnownConference = false;
+
+                if (entryType === 'inproceedings') {
+                    confAbbr = detectConference(newEntry.fields.booktitle);
+                    if (confAbbr) {
+                        isKnownConference = true;
+                        
+                        if (keepInproceedings) {
+                            // @inproceedings 유지, booktitle=학회약어로
+                            newEntry.fields.booktitle = confAbbr;
+                        } else {
+                            // @article 로 전환, booktitle을 journal로
+                            newEntry.ENTRYTYPE = 'article';
+                            delete newEntry.fields.booktitle;
+                            newEntry.fields.journal = confAbbr;
+                        }
+                    }
+                } 
+                
+                // (3) 이미 article인 경우도 학회인지 체크
+                else if (entryType === 'article') {
+                    confAbbr = detectConference(newEntry.fields.journal);
+                    if (confAbbr) {
+                        isKnownConference = true;
+                        newEntry.fields.journal = confAbbr; // 약어로 정리
+                    }
+                }
+
+                // (4) 불필요 필드 제거 (학회 논문인 경우에만)
+                if (isKnownConference) {
+                    for (const f of FIELDS_TO_REMOVE) {
+                        delete newEntry.fields[f];
+                    }
+                }
+
+                processedEntries.push(newEntry);
+            }
+            return processedEntries;
+        }
+
+        // #####################################################################
+        // 6. BibTeX 문자열로 다시 변환
+        // #####################################################################
+        function dumpBibtex(entries) {
+            let output = '';
+            for (const entry of entries) {
+                output += `@${entry.ENTRYTYPE}{${entry.ID},\n`;
+                
+                const keys = Object.keys(entry.fields).sort(); // 키 순서 정렬
+                
+                for (const key of keys) {
+                    let value = entry.fields[key];
+                    
+                    // BibTeX의 경우 title, booktitle, journal 등은 중괄호로 감싸야 
+                    // 대소문자 고정이 보장됩니다.
+                    let wrappedValue = value;
+                    // 값에 중괄호, 띄어쓰기, 하이픈 등이 포함되면 확실하게 감싸줍니다.
+                    if (key === 'title' || value.includes(' ') || value.includes('-') || value.includes('{')) {
+                        wrappedValue = `{${value}}`;
+                    }
+                    
+                    output += `  ${key} = ${wrappedValue},\n`;
+                }
+                
+                // 마지막 필드의 콤마 제거 및 엔트리 닫기
+                output = output.slice(0, -2) + '\n}\n\n';
+            }
+            return output.trim();
+        }
+
+        // #####################################################################
+        // 7. UI 상호작용 및 메인 실행 함수
+        // #####################################################################
+
+        async function processBibtex() {
+            const inputArea = document.getElementById('bibtexInput');
+            const outputArea = document.getElementById('bibtexOutput');
+            const keepInproceedings = document.getElementById('keepInproceedings').checked;
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const messageBox = document.getElementById('messageBox');
+            
+            outputArea.value = '';
+            messageBox.textContent = '';
+            loadingOverlay.style.display = 'flex';
+
+            const bibtexStr = inputArea.value.trim();
+
+            if (!bibtexStr) {
+                messageBox.textContent = 'BibTeX 데이터를 입력하세요.';
+                loadingOverlay.style.display = 'none';
+                return;
+            }
+
+            try {
+                // 1. 파싱 (단순 JS 기반)
+                const entries = parseBibtex(bibtexStr);
+
+                if (entries.length === 0) {
+                    messageBox.textContent = '입력된 텍스트에서 유효한 BibTeX 엔트리를 찾을 수 없습니다.';
+                    loadingOverlay.style.display = 'none';
+                    return;
+                }
+
+                // 2. 가공
+                const processedEntries = processBibtexEntries(entries, keepInproceedings);
+                
+                // 3. 덤프
+                const cleanedBibtex = dumpBibtex(processedEntries);
+                
+                outputArea.value = cleanedBibtex;
+                messageBox.textContent = `${entries.length}개의 BibTeX 엔트리를 정리했습니다!`;
+
+            } catch (e) {
+                console.error("BibTeX 처리 중 오류 발생:", e);
+                messageBox.textContent = `처리 중 오류가 발생했습니다: ${e.message}. (입력 형식을 확인해주세요)`;
+            } finally {
+                loadingOverlay.style.display = 'none';
+            }
+        }
+
+        function downloadBibtex() {
+            const outputArea = document.getElementById('bibtexOutput');
+            const cleanedBibtex = outputArea.value;
+
+            if (!cleanedBibtex.trim()) {
+                document.getElementById('messageBox').textContent = '정리된 BibTeX 내용이 없습니다.';
+                return;
+            }
+
+            const blob = new Blob([cleanedBibtex], { type: 'text/plain' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'cleaned_bibtex.bib';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+    </script>
+
+    <div class="max-w-7xl mx-auto bg-white p-6 rounded-xl shadow-2xl relative">
+        <!-- 로딩 오버레이 -->
+        <div id="loadingOverlay" class="loading-overlay absolute inset-0 flex justify-center items-center rounded-xl">
+            <div class="flex flex-col items-center">
+                <svg class="animate-spin -ml-1 mr-3 h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <p class="mt-3 text-lg font-semibold text-blue-600">처리 중...</p>
+            </div>
+        </div>
+
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-6 border-b pb-3 flex items-center">
+            <span class="mr-3 text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 7l-5 5l5 5"/><path d="M12 17l5-5l-5-5"/></svg>
+            </span>
+            BibTeX Cleaner for Research
+        </h1>
+
+        <!-- 옵션 및 버튼 -->
+        <div class="flex flex-col md:flex-row justify-between items-center bg-blue-50 p-4 rounded-lg mb-6 shadow-inner">
+            <div class="flex items-center mb-4 md:mb-0">
+                <input type="checkbox" id="keepInproceedings" class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <label for="keepInproceedings" class="ml-2 text-sm font-medium text-gray-700 select-none">
+                    @inproceedings 유지 (기본값: @article로 변환)
+                </label>
+            </div>
+            <div class="flex space-x-3">
+                <button onclick="processBibtex()" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-150 ease-in-out transform hover:scale-105 active:scale-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M12 17v-6"/><path d="M15 14l-3-3l-3 3"/></svg>
+                    BibTeX 정리 실행
+                </button>
+                <button onclick="downloadBibtex()" id="downloadButton" class="px-6 py-3 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600 transition duration-150 ease-in-out transform hover:scale-105 active:scale-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    결과 다운로드 (.bib)
+                </button>
+            </div>
+        </div>
+
+        <!-- 메시지 박스 -->
+        <div id="messageBox" class="p-3 mb-4 text-center text-sm font-medium text-green-700 bg-green-100 rounded-lg hidden" style="display: block;">
+            BibTeX 데이터를 아래 왼쪽 입력란에 붙여넣고 '정리 실행' 버튼을 누르세요.
+        </div>
+
+        <!-- 입력 및 출력 영역 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- 입력 -->
+            <div>
+                <label for="bibtexInput" class="block text-lg font-bold text-gray-700 mb-2">
+                    입력 BibTeX (Paste Here)
+                </label>
+                <textarea id="bibtexInput" placeholder="여기에 BibTeX 엔트리들을 붙여넣으세요. 예시:&#10;@inproceedings{smith2020visual,&#10;  author = {Smith, A and Jones, B},&#10;  title = {Visual Transformer for Large Scale {NLP}},&#10;  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},&#10;  year = {2020},&#10;  volume = {10},&#10;  pages = {100--109},&#10;}" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:ring-blue-500 shadow-inner resize-y"></textarea>
+            </div>
+            
+            <!-- 출력 -->
+            <div>
+                <label for="bibtexOutput" class="block text-lg font-bold text-gray-700 mb-2">
+                    정리된 BibTeX (Cleaned Output)
+                </label>
+                <textarea id="bibtexOutput" readonly placeholder="정리된 결과가 여기에 표시됩니다." class="w-full bg-gray-100 border-2 border-gray-300 rounded-lg p-4 resize-y"></textarea>
+            </div>
+        </div>
+        
+        <p class="mt-6 text-xs text-gray-500 text-center">
+            이 도구는 제목 대문자 유지 및 학회 정보 정리를 위해 원본 파이썬 스크립트의 핵심 로직을 자바스크립트로 구현한 웹 버전입니다.
+        </p>
+    </div>
+</body>
+</html>

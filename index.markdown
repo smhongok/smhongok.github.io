@@ -13,7 +13,7 @@ I am a postdoctoral researcher at the [Institute of New Media and Communications
 
 Email: smhongok at snu.ac.kr
 
-[[Google Scholar](https://scholar.google.com/citations?user=icHnJqsAAAAJ&hl=ko&oi=ao)] [[Github](https://github.com/smhongok)] [[LinkedIn](https://www.linkedin.com/in/sm-hong/)] [[CV](./files/CV_smhong.pdf)]
+[[Google Scholar](https://scholar.google.com/citations?user=icHnJqsAAAAJ&hl=ko&oi=ao)] [[Github](https://github.com/smhongok)] [[LinkedIn](https://www.linkedin.com/in/sm-hong/)] [[CV](./files/CV_smhong.pdf)] [[BibTeX Cleaner](./bibtex_cleaner.html)]
 
 ## Selected Publications
 ### 2024
