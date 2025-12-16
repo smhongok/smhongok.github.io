@@ -9,11 +9,11 @@ title: Seongmin Hong
   <img src="./files/picture_grad.jpg" alt="이미지 설명" width="200pt">
 </p>
 
-I am a postdoctoral researcher at the [Institute of New Media and Communications (INMC)](https://inmc.snu.ac.kr/en/) at Seoul National University (SNU). I recently earned my Ph.D. from the [Department of Electrical and Computer Engineering](https://ece.snu.ac.kr/) at  [Seoul National University](https://www.snu.ac.kr/), where I was part of the [Intelligent Computational imaging Lab](https://icl.snu.ac.kr/) (Prof. [Se Young Chun](https://icl.snu.ac.kr/pi)). My doctoral thesis was awarded the Distinguished Ph.D. Dissertation Award.
+I am a postdoctoral researcher at the [Institute of New Media and Communications (INMC)](https://inmc.snu.ac.kr/en/) at Seoul National University (SNU), currently fulfilling my mandatory alternative military service. I recently earned my Ph.D. from the [Department of Electrical and Computer Engineering](https://ece.snu.ac.kr/) at  [Seoul National University](https://www.snu.ac.kr/), where I was part of the [Intelligent Computational imaging Lab](https://icl.snu.ac.kr/) (Prof. [Se Young Chun](https://icl.snu.ac.kr/pi)). My research leverages large-scale first-order optimization in Computer Vision and Computational Imaging, specifically focusing on novel algorithms for Generative Model Inversion and differentiable formulations for discrete data. My doctoral thesis was awarded the Distinguished Ph.D. Dissertation Award.
 
 Email: smhongok at snu.ac.kr
 
-[[Google Scholar](https://scholar.google.com/citations?user=icHnJqsAAAAJ&hl=ko&oi=ao)] [[Github](https://github.com/smhongok)] [[LinkedIn](https://www.linkedin.com/in/sm-hong/)] [[CV](./files/CV_smhong.pdf)] [[BibTeX Cleaner](./bibtex_cleaner.html)]
+[[Google Scholar](https://scholar.google.com/citations?user=icHnJqsAAAAJ&hl=ko&oi=ao)] [[Github](https://github.com/smhongok)] [[LinkedIn](https://www.linkedin.com/in/sm-hong/)] [[CV](./files/CV_smhong.pdf)]
 
 ## Selected Publications
 ### 2024
