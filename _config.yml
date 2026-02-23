@@ -21,7 +21,7 @@
 title: Seongmin Hong
 email: smhongok@snu.ac.kr
 description: >- # this means to ignore newlines until "baseurl:"
-  I am currently a Ph.D. candidate at the Intelligent Computational Imaging Lab in the Department of Electrical and Computer Engineering at Seoul National University. I graduated from the same department in 2020 and decided to continue my research journey in pursuit of a doctoral degree.
+  I am a postdoctoral researcher at the Institute of New Media and Communications (INMC) at Seoul National University (SNU), currently fulfilling my mandatory alternative military service. I recently earned my Ph.D. from the Department of Electrical and Computer Engineering at Seoul National University, where I was part of the Intelligent Computational imaging Lab (Prof. Se Young Chun). My research leverages large-scale first-order optimization in Computer Vision and Computational Imaging, specifically focusing on novel algorithms for Generative Model Inversion and differentiable formulations for discrete data. My doctoral thesis was awarded the Distinguished Ph.D. Dissertation Award.
 #baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://smhongok.github.io"
 #twitter_username: jekyllrb
