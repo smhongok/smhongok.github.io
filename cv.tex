@@ -1,0 +1,293 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[bottom=0.8in,top=0.8in, left=0.8in,right=0.8in]{geometry}
+\pagestyle{empty}
+
+\usepackage[T1]{fontenc}
+\usepackage{newtxmath,newtxtext}
+\usepackage{fontawesome5}
+\usepackage{orcidlink}
+\usepackage{parskip}
+\usepackage{titlesec}	
+\usepackage{enumitem} % 리스트 간격 조절을 위해 추가
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor={linkcolour!90}, linkcolor={linkcolour!90}}
+
+\linespread{1.0} % 가독성을 위해 간격을 조금 넓힘
+
+% 섹션 제목 설정: 밑줄을 유지하면서 간격 최적화
+\newcommand{\sectitle}[1]{
+    \vspace{2ex}
+    {\Large\textbf{#1}}
+    \vspace{0.5ex}
+    \hrule
+    \vspace{1.5ex}
+}
+
+% 내용 들여쓰기를 위한 환경 정의
+\newenvironment{cvcontent}{
+    \begin{list}{}{
+        \leftmargin=1.5em % 여기서 들여쓰기 정도를 조절합니다
+        \labelwidth=0pt
+        \labelsep=0pt
+    }\item[]
+}{
+    \end{list}
+}
+
+\def\textBF#1{\sbox\CBox{#1}\resizebox{\wd\CBox}{\ht\CBox}{\textcolor{linkcolour}{{#1}}}}
+
+\begin{document}
+
+% Header (이전과 동일하게 유지하되 가독성만 살짝 조정)
+% \noindent
+% {\Huge \textbf{Seongmin Hong}} \hfill \href{mailto:smhongok@snu.ac.kr}{\faEnvelope} smhongok@snu.ac.kr\\
+% {\large Postdoctoral Researcher, Seoul National University} \hfill \href{https://smhongok.github.io}{\faGlobe} smhongok.github.io\\
+% \orcidlink{0000-0002-4723-4547} \hfill \href{https://linkedin.com/in/sm-hong}{\faLinkedin} linkedin.com/in/sm-hong
+
+% \vspace{1.5ex}
+
+\noindent
+\vspace{3pt}{\Huge \textbf{Seongmin Hong}} \hfill \href{mailto:smhongok@snu.ac.kr}{\faEnvelope \ smhongok@snu.ac.kr} \\
+{\large Postdoctoral Researcher, INMC, Seoul National University} \hfill \href{https://smhongok.github.io}{\faGlobe \ Website} \quad \href{https://linkedin.com/in/sm-hong}{\faLinkedin \ LinkedIn} \quad \href{https://scholar.google.com/citations?user=YOUR_ID}{\faGraduationCap \ Scholar}
+
+\vspace{0.5ex}
+\hrule height 0.8pt
+\vspace{1ex}
+
+% Bio
+\noindent
+I am a Postdoctoral Researcher at Seoul National University, currently fulfilling my mandatory alternative military service. My research leverages \textbf{first-order optimization} as a unified framework for \textbf{Deep Generative Models} and \textbf{Computational Imaging}, aiming to transcend the performance limits of traditional feed-forward scaling. By integrating rigorous mathematical foundations with high-efficiency system implementations, I strive to bridge the gap between digital modeling and physical reality—ultimately realizing grounded world models, professional creative ecosystems, and tangible innovations.
+
+\vspace{2pt}
+
+\sectitle{Education}
+\begin{cvcontent}
+\textbf{Ph.D.} in Electrical and Computer Engineering -- {Seoul National University}\hfill {03 2020 --- 08 2025}\\
+\textit{Dissertation}: Inversion of Deep Generative Models: Structural and Optimization-based Approaches\\
+% [Revised] Award 강조 (Bold 처리)
+\textit{Award}: \textbf{Distinguished Ph.D. Dissertation}\\
+Advisor: Se Young Chun, GPA: 4.08/4.3
+
+\textbf{B.S.} in Electrical and Computer Engineering -- {Seoul National University}  \hfill {03 2016 --- 02 2020}\\ 
+GPA: 3.70/4.3
+ 
+Math, Physics, and Astronomy -- {Gyeonggi Science High School for the Gifted} \hfill {03 2013 --- 02 2016}
+\begin{itemize}[leftmargin=1.5em, itemsep=0.1ex, topsep=0ex]
+    \item \small Selected for the Korean Astronomy Olympiad Winter School
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{cvcontent}
+\sectitle{Experience}
+\begin{cvcontent}
+\textbf{Postdoctoral Researcher} -- {Institute of New Media and Communications, SNU}\hfill {09 2025 --- 08 2026}
+
+%%%%%%%%%%%%%%%%%%%
+\end{cvcontent}
+\sectitle{Honors \& Fellowships}
+\begin{cvcontent}
+Apple Scholars in AI/ML PhD fellowship program - Institutional Nominee \hfill 2025
+
+Qualcomm Innovation Fellowship Korea 2024 (won 4,000,000 KRW) \hfill 12 2024
+
+Brain Korea 21 Four Program \hfill 03 2020 --- 08 2025\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{cvcontent}
+\sectitle{Top-tier Conference Publications (sole first author)}
+\begin{cvcontent}
+\href{https://diffbmp.com/}{DiffBMP: Differentiable Rendering with Bitmap Primitives}\\
+\textbf{Seongmin Hong}*, Junghun James Kim*, Daehyeop Kim, Insoo Chung, Se Young Chun (*co-first authored)\\
+Conference on Computer Vision and Pattern Recognition (\textbf{CVPR}), 2026.
+
+\href{https://smhongok.github.io/dec-inv.html}{Gradient-free Decoder Inversion in Latent Diffusion Models}\\
+\textbf{Seongmin Hong}, Suh Yoon Jeon, Kyeonghyun Lee, Ernest K. Ryu, Se Young Chun\\
+Neural Information Processing Systems (\textbf{NeurIPS}), 2024.
+
+\href{https://smhongok.github.io/ada-sel.html}{Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing}\\
+\textbf{Seongmin Hong}, Jaehyeok Bae, Jongho Lee, Se Young Chun\\
+European Conference on Computer Vision (\textbf{ECCV}), 2024.
+
+\href{https://smhongok.github.io/inv-dpm.html}{On Exact Inversion of DPM-Solvers}\\
+\textbf{Seongmin Hong}, Kyeonghyun Lee, Suh Yoon Jeon, Hyewon Bae, Se Young Chun\\
+Conference on Computer Vision and Pattern Recognition (\textbf{CVPR}), 2024.
+
+\href{https://smhongok.github.io/robustness.html}{On the Robustness of Normalizing Flows for Inverse Problems in Imaging}\\
+\textbf{Seongmin Hong}, Inbum Park, Se Young Chun\\
+International Conference on Computer Vision (\textbf{ICCV}), 2023.
+
+\href{https://smhongok.github.io/nubsf.html}{Neural Diffeomorphic Non-uniform B-spline Flows}\\
+\textbf{Seongmin Hong}, Se Young Chun\\
+Thirty-Seventh AAAI Conference on Artificial Intelligence (\textbf{AAAI}, oral), 2023.
+
+\end{cvcontent}
+\sectitle{International Journal Publications}
+\begin{cvcontent}
+\href{https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/rsn2.12319}{Advanced direction of arrival estimation using step-learnt iterative soft-thresholding for frequency-modulated continuous wave multiple-input multiple-output radar}\\
+\textbf{Seongmin Hong}, Seong-Cheol Kim, Seongwook Lee\\
+IET Radar, Sonar \& Navigation, 2023.
+
+\href{https://ieeexplore.ieee.org/abstract/document/9552897}{Radar Signal Decomposition in Steering Vector Space for Multi-Target Classification}\\
+\textbf{Seongmin Hong}, Seongwook Lee, Byeong-Ho Lee, Jinwook Kim, Yong-Hwa Kim, Seong-Cheol Kim\\
+IEEE Sensors Journal, 2021.
+
+\href{https://doi.org/10.1016/j.imavis.2025.105786}{Fidelity-Preserving Zero-shot Diffusion Models for Highly Ill-posed Inverse Problems in Lensless Imaging}\\
+Haechang Lee, Dong Ju Mun, Hyunwoo Lee, Kyung Chul Lee, \textbf{Seongmin Hong}, Gwanghyun Kim, Seung Ah Lee, Se
+Young Chun\\
+Accepted at Image and Vision Computing, Volume 165, January 2026.
+
+\href{https://www.sciencedirect.com/science/authShare/S0167865525003083/20250924T034000Z/1?md5=581f3b65efe5edd888ea960eea18a821&dgcid=coauthor}{Robust Watermarks for Audio Diffusion Models by Quadrature Amplitude Modulation}\\
+Kyoungryeol Lee$^*$, \textbf{Seongmin Hong}$^*$, Se Young Chun (*co-first authored)\\
+Pattern Recognition Letters, Vol. 198, pp. 22-28, 2025.
+
+\end{cvcontent}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectitle{Preprints \& Manuscripts under Review}
+\begin{cvcontent}
+    \href{https://dx.doi.org/10.2139/ssrn.5397023}{Principled Reframing in Motion Transfer with Video Diffusion Models} \\
+    Donggyu Lee*, \textbf{Seongmin Hong}*, Se Young Chun (*co-first authored), 2025 \\
+\end{cvcontent}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sectitle{Invited Talks}
+\begin{cvcontent}
+\textBF{Inversion of Deep Generative Models: Structural and Optimization-based Approaches}\\
+At Chung-Ang University, Seoul, Korea, Oct 22, 2025
+
+\textBF{Inversion of Deep Generative Models: Structural and Optimization-based Approaches}\\
+At ETRI, Daejeon, Korea, Oct 21, 2025
+
+\textBF{On the Robustness of Normalizing Flows for Inverse Problems in Imaging}\\
+In 2024 SIAM Conference on Imaging Science (\textbf{SIAM IS24}), Atlanta, Georgia, U.S., May 28-31, 2024
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{cvcontent}
+\sectitle{Exhibitions \& Art Projects }
+\begin{cvcontent}
+\href{https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260206141656111035}{Engineer's AI Media Art: Digital Assemblage} \hfill {02 2026}\\
+Led a special workshop at Seoul Science Museum demonstrating DiffBMP technology to create digital assemblage artworks. Taught participants how to use simple recognition methods to transform everyday objects into artistic expressions, exploring the intersection of engineering, technology, and art.
+
+\href{https://culture.snu.ac.kr/event/ipa}{IPA (Interactive Perspective Art): Ciao, Technology} \hfill {01 2026}\\
+Collaborative kinetic art exhibition at SNU Powerplant. Served as the \textbf{lead for software infrastructure and typography} for the signature piece \textit{Ordered Volume}—a robotic sculpture utilizing 160 motors and spherical voxels to translate digital data into physical forms. 
+
+\href{https://tumblbug.com/arrco}{ARRCO: Multi-view 3D Crystal Point-Cloud Art} \hfill {2025}\\
+Independent crowd-funded project. Developed the full computational pipeline for high-density point-cloud laser engraving to create multi-view optical illusions where distinct images emerge from different observer perspectives.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{cvcontent}
+
+\newpage 
+\sectitle{Patents}
+\begin{cvcontent}
+\textBF{Audio Data Management Device and Method Using A Generative AI Model}
+\\Se Young Chun, \textbf{Seongmin Hong}, Kyungryeol Lee\\
+Korea Patent Filed (Application No. 10-2025-0046656), 04 2025
+
+
+%%%%%%%%%%%%%%%%%%%
+\end{cvcontent}
+\sectitle{Teaching Experience}
+\begin{cvcontent}
+Head TA, Topics in Signal Processing (Generative Diffusion Model, English Lecture) \hfill 2025 Autumn
+
+Head TA, Signals and Systems (English Lecture) \hfill 2022 Spring
+
+Head TA, Seminar in Electrical and Computer Engineering 3 \hfill 2020 Spring
+
+TA, Advanced Electromagnetics 1 \hfill 2020 Spring
+\end{cvcontent}
+
+%%%%%%%%%%%%%%%%%%%
+\sectitle{Mentoring \& Advising} % 신설 섹션
+\begin{cvcontent}
+\textbf{Research Mentor for 10+ Undergraduate Interns} \hfill 2022 --- Present \\
+\textit{Intelligent Computational Imaging Lab (ICL), SNU}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=0.3ex]
+    \item \href{https://jaehyeokbae.me/}{Jaehyeok Bae} (Now Ph. D. student at \textbf{Stanford University}) --- \textit{ECCV 2024}
+    \item \href{https://inbumpark.github.io/}{Inbum Park} (Now Ph. D. student at \textbf{University of Maryland}) --- \textit{ICCV 2023}
+    \item \href{https://www.linkedin.com/in/insoo-chung-07a242358/}{Insoo Chung} (Now Research Scientist at \textbf{AIRS Medical})
+    \item \href{https://scholar.google.com/citations?user=guC7J3YAAAAJ&hl=ko}{Kyeonghyun Lee} (Now Ph.D. student at \textbf{Seoul National University}) --- \textit{CVPR 2024}
+    \item \href{https://scholar.google.com/citations?user=Xei6FKcAAAAJ&hl=ko}{Kyungryeol Lee} (Now Ph.D. student at \textbf{Seoul National University}) --- \textit{PRL 2025}
+    \item Dohyun Mah (Now M.S. student at \textbf{Seoul National University})
+    \item Donggyu Lee (Undergraduate Intern) --- \textit{\href{https://dx.doi.org/10.2139/ssrn.5397023}{Preprint} 2025}
+    \item \textbf{Mentored 3+ additional interns} on their early-stage research and career development.
+\end{itemize}
+\end{cvcontent}
+
+\sectitle{Academic Services}
+\begin{cvcontent}
+\href{https://elaw.klri.re.kr/kor_service/jomunPrint.do?hseq=10572&cseq=235795}{Technical Research Personnel} (Alternative military service)
+\hfill 03 2023 --- 02 2025, 09 2025 --- 08 2026
+
+Reviewer: NeurIPS (2024, 2025), ICML (2025), ICLR (2025, 2026), CVPR (2025), ICCV (2025), \\ AAAI (2026), AISTATS (2025, 2026), ACMMM (2025)\\ IEEE Sensors Journal, ACM TOMM, IEEE TPAMI, IEEE TMM \hfill since 2023
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{cvcontent}
+\sectitle{Challenges}
+\begin{cvcontent}
+\href{https://codalab.lisn.upsaclay.fr/competitions/17339}{AIM 2024 Depth Upsampling Challenge} - 3rd place\\
+Woojae Han, Kyeonghyun Lee, \textbf{Seongmin Hong}, Se Young Chun\\
+
+\end{cvcontent}
+\sectitle{Workshop Papers}
+\begin{cvcontent}
+\href{https://uncertainty-cv.github.io/2024/papers/}{Uncertainty-Adaptive Selection of Sampling-Reconstruction for Fourier Compressed Sensing}\\
+\textbf{Seongmin Hong}, Jaehyeok Bae, Jongho Lee, Se Young Chun\\
+3rd Workshop on Uncertainty Quantification for Computer Vision in ECCV (extended abstract), 2024.
+
+\end{cvcontent}
+\sectitle{Domestic Publications}
+\begin{cvcontent}
+\href{https://journal-home.s3.ap-northeast-2.amazonaws.com/site/2020kics/presentation/0387.pdf}{Optimization of 16-QAM Constellations with AWGN Channel}\\
+\textbf{Seongmin Hong}, Jeong-Hoon Park, Doyoung Ham, Seong-Cheol Kim\\
+KICS Summer Conference (in Korean), 2020.
+
+\textBF{Target classification based on point cloud data using automotive imaging radar}\\
+Sohee Lim, Jaehoon Jung, \textbf{Seongmin Hong}, Byeong-ho Lee, Seong-Cheol Kim\\
+KICS Winter Conference (in Korean), 2021.
+
+\textBF{Measurement Data Release on 2.4 GHz ISM Band Usage}\\
+Doyoung Ham, \textbf{Seongmin Hong}, Byonghyo Shim, Seong-Cheol Kim\\
+KICS Winter Conference (in Korean), 2021.
+
+\textBF{Analysis of CNN Classifier Performance for Segway Data with 77GHz Automotive Radar}\\
+Byeong-ho Lee, \textbf{Seongmin Hong}, Jinwook Kim, Seongwook Lee, Byonghyo Sim, Seong-Cheol Kim\\
+KICS Winter Conference (in Korean), 2021.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% References Section 추가
+\end{cvcontent}
+\sectitle{References}
+\begin{cvcontent}
+    \begin{minipage}[t]{0.5\textwidth}
+        \textbf{Prof. Se Young Chun} (Advisor)\\
+        Professor, ECE\\
+        Seoul National University\\
+        \href{mailto:sychun@snu.ac.kr}{sychun@snu.ac.kr}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \textbf{Prof. Ernest K. Ryu}\\
+        Assistant Professor, Applied Mathematics\\
+        UCLA\\
+        \href{mailto:eryu@math.ucla.edu}{eryu@math.ucla.edu}
+    \end{minipage}
+    \\
+    \\
+    \\
+    \begin{minipage}[t]{0.5\textwidth}
+        \textbf{Prof. Jongho Lee}\\
+        Professor, ECE\\
+        Seoul National University\\
+        \href{mailto:jonghoyi@snu.ac.kr}{jonghoyi@snu.ac.kr}
+    \end{minipage}    
+\end{cvcontent}
+
+\end{document}
