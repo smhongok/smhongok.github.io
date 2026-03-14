@@ -16,6 +16,16 @@ Email: smhongok at snu.ac.kr
 [[Google Scholar](https://scholar.google.com/citations?user=icHnJqsAAAAJ&hl=ko&oi=ao)] [[Github](https://github.com/smhongok)] [[LinkedIn](https://www.linkedin.com/in/sm-hong/)] [[CV](./files/CV_smhong.pdf)]
 
 ## Selected Publications
+
+### 2026
+
+* #### **DiffBMP: Differentiable Rendering with Bitmap Primitives**  
+
+  **Seongmin Hong\***, Junghun James Kim\*, Daehyeop Kim, Insoo Chung, Se Young Chun  
+  Accepted to Conference on Computer Vision and Pattern Recognition (**CVPR**), 2026.  
+
+  [<a href="https://arxiv.org/pdf/2602.22625">Paper</a>][<a href="https://diffbmp.com/">Project</a>] [<a href="/bibtex.html#hong2026diffbmp">bibTeX</a>]
+
 ### 2024
 
 * #### **Gradient-free Decoder Inversion in Latent Diffusion Models**  

@@ -5,6 +5,12 @@
 #layout: page
 permalink: /bibtex.html
 ---
+    @misc{hong2026diffbmp,
+        author    = {Hong, Seongmin and Kim, Junghun James and Kim, Daehyeop and Chung, Insoo and Chun, Se Young},
+        title     = {DiffBMP: Differentiable Rendering with Bitmap Primitives},
+        arxiv     = {2602.22625},
+        year      = {2026}
+    }
     @inproceedings{hong2024gradient,
      author = {Hong, Seongmin and Jeon, Suh Yoon and Lee, Kyeonghyun and Ryu, Ernest K. and Chun, Young},
      booktitle = {Advances in Neural Information Processing Systems},
