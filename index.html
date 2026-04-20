@@ -326,7 +326,16 @@
 
     <div class="exhibit">
       <div class="exhibit-thumb">
-        <div class="no-thumb">image</div>
+        <div class="slideshow" id="slide-da">
+          <img src="files/arts/digital_assemblage/photo1_t.jpg" class="slide active" alt="Digital Assemblage 1">
+          <img src="files/arts/digital_assemblage/photo2_t.jpg" class="slide" alt="Digital Assemblage 2">
+          <img src="files/arts/digital_assemblage/photo4_t.jpg" class="slide" alt="Digital Assemblage 3">
+          <div class="slide-dots">
+            <span class="dot active" onclick="goSlide('slide-da',0)"></span>
+            <span class="dot" onclick="goSlide('slide-da',1)"></span>
+            <span class="dot" onclick="goSlide('slide-da',2)"></span>
+          </div>
+        </div>
       </div>
       <div class="exhibit-body">
         <p class="exhibit-title">
@@ -344,7 +353,14 @@
 
     <div class="exhibit">
       <div class="exhibit-thumb">
-        <div class="no-thumb">image</div>
+        <div class="slideshow" id="slide-ipa">
+          <img src="files/arts/IPA/ipa1_t.jpg" class="slide active" alt="IPA exhibition 1">
+          <img src="files/arts/IPA/ipa2_t.jpg" class="slide" alt="IPA exhibition 2">
+          <div class="slide-dots">
+            <span class="dot active" onclick="goSlide('slide-ipa',0)"></span>
+            <span class="dot" onclick="goSlide('slide-ipa',1)"></span>
+          </div>
+        </div>
       </div>
       <div class="exhibit-body">
         <p class="exhibit-title">
@@ -361,7 +377,7 @@
 
     <div class="exhibit">
       <div class="exhibit-thumb">
-        <div class="no-thumb">image</div>
+        <img src="files/arts/arrco/arrco.gif" alt="ARRCO" style="width:100%;border-radius:4px;border:1px solid #eee;">
       </div>
       <div class="exhibit-body">
         <p class="exhibit-title">
@@ -378,10 +394,38 @@
 
   </section>
 
-  <!-- ── All Publications ── -->
+  <!-- ── Other Publications ── -->
   <section>
-    <h2>All Publications</h2>
+    <h2>Other Publications</h2>
     <ul class="pub-all-list">
+
+      <li>
+        <p class="pub-title"><a href="https://arxiv.org/abs/2603.10445">Unlearning the Unpromptable: Prompt-free Instance Unlearning in Diffusion Models</a></p>
+        <p class="pub-authors">Kyungryeol Lee*, Kyeonghyun Lee*, <strong>Seongmin Hong*</strong>, Byung Hyun Lee, Se Young Chun</p>
+        <p class="pub-venue">Machine Unlearning for Vision (MUV) Workshop, <span class="venue-name">CVPR</span> 2026 (extended abstract)</p>
+        <div class="pub-tags">
+          <span class="tag tag-venue">CVPR Workshop</span>
+          <span class="tag tag-author">Co-1st Author</span>
+          <span class="tag tag-genmodel">Generative Model</span>
+        </div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2603.10445">Paper</a>
+        </div>
+      </li>
+
+      <li>
+        <p class="pub-title"><a href="https://uncertainty-cv.github.io/2024/papers/">Uncertainty-Adaptive Selection of Sampling-Reconstruction for Fourier Compressed Sensing</a></p>
+        <p class="pub-authors"><strong>Seongmin Hong</strong>, Jaehyeok Bae, Jongho Lee, Se Young Chun</p>
+        <p class="pub-venue">3rd Workshop on Uncertainty Quantification for CV, <span class="venue-name">ECCV</span> 2024 (extended abstract)</p>
+        <div class="pub-tags">
+          <span class="tag tag-venue">ECCV Workshop</span>
+          <span class="tag tag-author">1st Author</span>
+          <span class="tag tag-ci">Computational Imaging</span>
+        </div>
+        <div class="pub-links">
+          <a href="https://uncertainty-cv.github.io/2024/papers/">Paper</a>
+        </div>
+      </li>
 
       <li>
         <p class="pub-title">Fidelity-Preserving Zero-Shot Diffusion Models for Highly Ill-Posed Inverse Problems in Lensless Imaging</p>
@@ -461,6 +505,28 @@ function toggleNews() {
     btn.textContent = '▲ Show less';
   }
 }
+
+/* ── Slideshow ── */
+var slideIdx = {};
+function goSlide(id, idx) {
+  var el = document.getElementById(id);
+  var slides = el.querySelectorAll('.slide');
+  var dots   = el.querySelectorAll('.dot');
+  slides[slideIdx[id]].classList.remove('active');
+  dots[slideIdx[id]].classList.remove('active');
+  slideIdx[id] = idx;
+  slides[idx].classList.add('active');
+  dots[idx].classList.add('active');
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.slideshow').forEach(function(el) {
+    slideIdx[el.id] = 0;
+    var n = el.querySelectorAll('.slide').length;
+    setInterval(function() {
+      goSlide(el.id, (slideIdx[el.id] + 1) % n);
+    }, 3200);
+  });
+});
 </script>
 
 </body>
