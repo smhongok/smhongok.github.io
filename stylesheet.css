@@ -235,6 +235,41 @@ section h2 {
   margin-top: 8px;
 }
 
+/* ── All Publications simple list ── */
+.pub-all-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pub-all-list li {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pub-all-list li:last-child {
+  border-bottom: none;
+}
+
+.pub-all-list .pub-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 3px;
+}
+
+.pub-all-list .pub-authors {
+  font-size: 13.5px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.pub-all-list .pub-venue {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
 /* ── Footer ── */
 footer {
   text-align: center;
