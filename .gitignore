@@ -3,3 +3,6 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 vendor/
+
+# Large source assets (not for deployment)
+files/hong2026diffbmp/demo_image_wonhee.png
