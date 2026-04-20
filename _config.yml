@@ -20,21 +20,16 @@
 
 title: Seongmin Hong
 email: smhongok@snu.ac.kr
-description: >- # this means to ignore newlines until "baseurl:"
-  I am a postdoctoral researcher at the Institute of New Media and Communications (INMC) at Seoul National University (SNU), currently fulfilling my mandatory alternative military service. I recently earned my Ph.D. from the Department of Electrical and Computer Engineering at Seoul National University, where I was part of the Intelligent Computational imaging Lab (Prof. Se Young Chun). My research leverages large-scale first-order optimization in Computer Vision and Computational Imaging, specifically focusing on novel algorithms for Generative Model Inversion and differentiable formulations for discrete data. My doctoral thesis was awarded the Distinguished Ph.D. Dissertation Award.
-#baseurl: "" # the subpath of your site, e.g. /blog
+description: "Postdoctoral Researcher at Seoul National University. Computer Vision, Computational Imaging, Generative Model Inversion."
 url: "https://smhongok.github.io"
-#twitter_username: jekyllrb
-github_username:  smhongok
+github_username: smhongok
 
 # Build settings
-theme: minima
-#theme: minimal-mistakes-jekyll
-#theme: architect
+# No theme — using custom index.html with stylesheet.css
 plugins:
   - jekyll-feed
 
-header_pages:
+exclude:
   - index.markdown
 # Exclude from processing.
 # The following items will not be processed, by default.

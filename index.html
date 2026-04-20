@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Seongmin Hong</title>
+  <meta name="author" content="Seongmin Hong">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Seongmin Hong — Postdoctoral Researcher at Seoul National University. Computer Vision, Computational Imaging, Generative Model Inversion.">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="main">
+
+  <!-- ── Profile ── -->
+  <div id="profile">
+    <div id="profile-text">
+      <p class="name">Seongmin Hong</p>
+
+      <p>
+        I am a postdoctoral researcher at the
+        <a href="https://inmc.snu.ac.kr/en/">Institute of New Media and Communications (INMC)</a>
+        at Seoul National University (SNU), currently fulfilling my mandatory alternative military service.
+      </p>
+      <p>
+        I recently earned my Ph.D. from the
+        <a href="https://ece.snu.ac.kr/">Department of Electrical and Computer Engineering</a>
+        at <a href="https://www.snu.ac.kr/">Seoul National University</a>,
+        where I was part of the
+        <a href="https://icl.snu.ac.kr/">Intelligent Computational Imaging Lab</a>
+        (Prof. <a href="https://icl.snu.ac.kr/pi">Se Young Chun</a>).
+        My research leverages large-scale first-order optimization in Computer Vision and
+        Computational Imaging, focusing on novel algorithms for
+        <strong>Generative Model Inversion</strong> and differentiable formulations for discrete data.
+        My doctoral thesis was awarded the <strong>Distinguished Ph.D. Dissertation Award</strong>.
+      </p>
+
+      <div id="profile-links">
+        <a href="mailto:smhongok@snu.ac.kr">Email</a> &nbsp;/&nbsp;
+        <a href="files/CV_smhong.pdf">CV</a> &nbsp;/&nbsp;
+        <a href="https://scholar.google.com/citations?user=icHnJqsAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+        <a href="https://github.com/smhongok">GitHub</a> &nbsp;/&nbsp;
+        <a href="https://www.linkedin.com/in/sm-hong/">LinkedIn</a>
+      </div>
+    </div>
+
+    <div id="profile-photo">
+      <img src="files/picture_grad.jpg" alt="Seongmin Hong">
+    </div>
+  </div>
+
+  <!-- ── News ── -->
+  <section>
+    <h2>News</h2>
+    <ul id="news-list">
+      <li>
+        <span class="news-date">Apr 2026</span>
+        <span><a href="https://diffbmp.com/">DiffBMP</a> accepted to <strong>CVPR 2026</strong>!</span>
+      </li>
+      <li>
+        <span class="news-date">Dec 2024</span>
+        <span>Gradient-free Decoder Inversion paper presented at <strong>NeurIPS 2024</strong>.</span>
+      </li>
+      <li>
+        <span class="news-date">Oct 2024</span>
+        <span>Adaptive Selection paper presented at <strong>ECCV 2024</strong>.</span>
+      </li>
+      <li>
+        <span class="news-date">Jun 2024</span>
+        <span>Exact Inversion of DPM-Solvers paper presented at <strong>CVPR 2024</strong>.</span>
+      </li>
+      <div id="news-extra">
+        <li>
+          <span class="news-date">Feb 2024</span>
+          <span>Awarded the <strong>Distinguished Ph.D. Dissertation Award</strong> from Seoul National University.</span>
+        </li>
+        <li>
+          <span class="news-date">Oct 2023</span>
+          <span>Normalizing Flows robustness paper presented at <strong>ICCV 2023</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Jan 2023</span>
+          <span>Neural Diffeomorphic Non-uniform B-spline Flows paper presented at <strong>AAAI 2023</strong>.</span>
+        </li>
+      </div>
+    </ul>
+    <button id="show-more-btn" onclick="toggleNews()">▼ Show more</button>
+  </section>
+
+  <!-- ── Publications ── -->
+  <section>
+    <h2>Publications</h2>
+    <p style="font-size:13.5px;color:#888;margin-bottom:24px;">* denotes equal contribution.</p>
+
+    <!-- 2026 -->
+    <p class="pub-year-heading">2026</p>
+
+    <div class="pub">
+      <div class="pub-thumb">
+        <div class="no-thumb">thumbnail</div>
+      </div>
+      <div class="pub-body">
+        <p class="pub-title">
+          <a href="https://diffbmp.com/">DiffBMP: Differentiable Rendering with Bitmap Primitives</a>
+        </p>
+        <p class="pub-authors">
+          <strong>Seongmin Hong*</strong>, Junghun James Kim*, Daehyeop Kim, Insoo Chung, Se Young Chun
+        </p>
+        <p class="pub-venue">
+          Conference on Computer Vision and Pattern Recognition (<span class="venue-name">CVPR</span>), 2026
+        </p>
+        <div class="pub-links">
+          <a href="https://arxiv.org/pdf/2602.22625">Paper</a>
+          <a href="https://diffbmp.com/">Project</a>
+          <a href="/bibtex.html#hong2026diffbmp">BibTeX</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2024 -->
+    <p class="pub-year-heading">2024</p>
+
+    <div class="pub">
+      <div class="pub-thumb">
+        <div class="no-thumb">thumbnail</div>
+      </div>
+      <div class="pub-body">
+        <p class="pub-title">
+          <a href="/dec-inv.html">Gradient-free Decoder Inversion in Latent Diffusion Models</a>
+        </p>
+        <p class="pub-authors">
+          <strong>Seongmin Hong</strong>, Suh Yoon Jeon, Kyeonghyun Lee, Ernest K. Ryu, Se Young Chun
+        </p>
+        <p class="pub-venue">
+          Neural Information Processing Systems (<span class="venue-name">NeurIPS</span>), 2024
+        </p>
+        <div class="pub-links">
+          <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/970f59b22f4c72aec75174aae63c7459-Abstract-Conference.html">Paper</a>
+          <a href="https://arxiv.org/abs/2409.18442">arXiv</a>
+          <a href="/dec-inv.html">Project</a>
+          <a href="https://recorder-v3.slideslive.com/#/share?share=94209&s=10070c25-7055-403c-bd99-5bfc52ab749d">Video</a>
+          <a href="https://github.com/smhongok/dec-inv">GitHub</a>
+          <a href="/bibtex.html#hong2024gradient">BibTeX</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-thumb">
+        <div class="no-thumb">thumbnail</div>
+      </div>
+      <div class="pub-body">
+        <p class="pub-title">
+          <a href="/ada-sel.html">Adaptive Selection of Sampling-Reconstruction in Fourier Compressed Sensing</a>
+        </p>
+        <p class="pub-authors">
+          <strong>Seongmin Hong</strong>, Jaehyeok Bae, Jongho Lee, Se Young Chun
+        </p>
+        <p class="pub-venue">
+          European Conference on Computer Vision (<span class="venue-name">ECCV</span>), 2024
+        </p>
+        <div class="pub-links">
+          <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08236.pdf">Paper</a>
+          <a href="https://arxiv.org/abs/2409.11738">arXiv</a>
+          <a href="/ada-sel.html">Project</a>
+          <a href="https://github.com/smhongok/ada-sel">GitHub</a>
+          <a href="/bibtex.html#Hong_2024_ECCV">BibTeX</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-thumb">
+        <div class="no-thumb">thumbnail</div>
+      </div>
+      <div class="pub-body">
+        <p class="pub-title">
+          <a href="/inv-dpm.html">On Exact Inversion of DPM-Solvers</a>
+        </p>
+        <p class="pub-authors">
+          <strong>Seongmin Hong</strong>, Kyeonghyun Lee, Suh Yoon Jeon, Hyewon Bae, Se Young Chun
+        </p>
+        <p class="pub-venue">
+          Conference on Computer Vision and Pattern Recognition (<span class="venue-name">CVPR</span>), 2024
+        </p>
+        <div class="pub-links">
+          <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_On_Exact_Inversion_of_DPM-Solvers_CVPR_2024_paper.pdf">Paper</a>
+          <a href="https://openaccess.thecvf.com/content/CVPR2024/supplemental/Hong_On_Exact_Inversion_CVPR_2024_supplemental.pdf">Supp</a>
+          <a href="https://arxiv.org/abs/2311.18387">arXiv</a>
+          <a href="/inv-dpm.html">Project</a>
+          <a href="https://github.com/smhongok/inv-dpm">GitHub</a>
+          <a href="/bibtex.html#Hong_2024_CVPR">BibTeX</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2023 -->
+    <p class="pub-year-heading">2023</p>
+
+    <div class="pub">
+      <div class="pub-thumb">
+        <div class="no-thumb">thumbnail</div>
+      </div>
+      <div class="pub-body">
+        <p class="pub-title">
+          <a href="/robustness.html">On the Robustness of Normalizing Flows for Inverse Problems in Imaging</a>
+        </p>
+        <p class="pub-authors">
+          <strong>Seongmin Hong</strong>, Inbum Park, Se Young Chun
+        </p>
+        <p class="pub-venue">
+          International Conference on Computer Vision (<span class="venue-name">ICCV</span>), 2023
+        </p>
+        <div class="pub-links">
+          <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Hong_On_the_Robustness_of_Normalizing_Flows_for_Inverse_Problems_in_ICCV_2023_paper.pdf">Paper</a>
+          <a href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Hong_On_the_Robustness_ICCV_2023_supplemental.pdf">Supp</a>
+          <a href="https://arxiv.org/abs/2212.04319">arXiv</a>
+          <a href="/robustness.html">Project</a>
+          <a href="https://github.com/smhongok/robustNF">GitHub</a>
+          <a href="/bibtex.html#hong23robustness">BibTeX</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-thumb">
+        <div class="no-thumb">thumbnail</div>
+      </div>
+      <div class="pub-body">
+        <p class="pub-title">
+          <a href="/nubsf.html">Neural Diffeomorphic Non-uniform B-spline Flows</a>
+        </p>
+        <p class="pub-authors">
+          <strong>Seongmin Hong</strong>, Se Young Chun
+        </p>
+        <p class="pub-venue">
+          Thirty-Seventh AAAI Conference on Artificial Intelligence (<span class="venue-name">AAAI</span>), 2023
+        </p>
+        <div class="pub-links">
+          <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26441">Paper</a>
+          <a href="https://arxiv.org/abs/2304.04555">arXiv</a>
+          <a href="/nubsf.html">Project</a>
+          <a href="https://github.com/smhongok/Non-uniform-B-spline-Flow">GitHub</a>
+          <a href="/bibtex.html#hong23neural">BibTeX</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-thumb">
+        <div class="no-thumb">thumbnail</div>
+      </div>
+      <div class="pub-body">
+        <p class="pub-title">
+          Advanced Direction of Arrival Estimation Using Step-Learnt Iterative Soft-Thresholding for FMCW MIMO Radar
+        </p>
+        <p class="pub-authors">
+          <strong>Seongmin Hong</strong>, Seong-Cheol Kim, Seongwook Lee
+        </p>
+        <p class="pub-venue">
+          <span class="venue-name">IET Radar, Sonar &amp; Navigation</span>, 2023
+        </p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1049/rsn2.12319">Paper</a>
+          <a href="/bibtex.html#hong23advanced">BibTeX</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2021 -->
+    <p class="pub-year-heading">2021</p>
+
+    <div class="pub">
+      <div class="pub-thumb">
+        <div class="no-thumb">thumbnail</div>
+      </div>
+      <div class="pub-body">
+        <p class="pub-title">
+          Radar Signal Decomposition in Steering Vector Space for Multi-Target Classification
+        </p>
+        <p class="pub-authors">
+          <strong>Seongmin Hong</strong>, Seongwook Lee, Byeong-Ho Lee, Jinwook Kim, Yong-Hwa Kim, Seong-Cheol Kim
+        </p>
+        <p class="pub-venue">
+          <span class="venue-name">IEEE Sensors Journal</span>, 2021
+        </p>
+        <div class="pub-links">
+          <a href="https://ieeexplore.ieee.org/abstract/document/9552897">Paper</a>
+          <a href="/bibtex.html#hong21radar">BibTeX</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div><!-- end #main -->
+
+<footer>
+  <p>Design inspired by <a href="https://jonbarron.info/">Jon Barron</a>'s website template.</p>
+</footer>
+
+<script>
+function toggleNews() {
+  var extra = document.getElementById('news-extra');
+  var btn = document.getElementById('show-more-btn');
+  if (extra.style.display === 'block') {
+    extra.style.display = 'none';
+    btn.textContent = '▼ Show more';
+  } else {
+    extra.style.display = 'block';
+    btn.textContent = '▲ Show less';
+  }
+}
+</script>
+
+</body>
+</html>
