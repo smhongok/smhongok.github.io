@@ -1,0 +1,32 @@
+name: Build Alt CV PDF
+
+on:
+  push:
+    paths:
+      - 'CV_SMH_alt.tex'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV_SMH_alt.tex
+          latexmk_use_pdflatex: true
+
+      - name: Move PDF to files/
+        run: mv CV_SMH_alt.pdf files/CV_smhong_alt.pdf
+
+      - name: Commit updated PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add files/CV_smhong_alt.pdf
+          git diff --cached --quiet || git commit -m "chore: rebuild alt CV PDF from CV_SMH_alt.tex"
+          git push
