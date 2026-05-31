@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'CV_SMH_alt2.tex'
+      - 'CV_preamble.tex'
+      - 'CV_body.tex'
 
 jobs:
   build:
