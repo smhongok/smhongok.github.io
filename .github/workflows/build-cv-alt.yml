@@ -1,6 +1,7 @@
 name: Build Alt CV PDF
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'CV_SMH_alt.tex'
