@@ -1,0 +1,39 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[bottom=0.8in,top=0.8in, left=0.8in,right=0.8in]{geometry}
+\pagestyle{empty}
+
+\usepackage[T1]{fontenc}
+\usepackage{newtxmath,newtxtext}
+\usepackage{fontawesome5}
+\usepackage{orcidlink}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor={linkcolour!90}, linkcolor={linkcolour!90}}
+
+\linespread{1.0}
+
+\newcommand{\sectitle}[1]{
+    \vspace{2ex}
+    {\Large\textbf{#1}}
+    \vspace{0.5ex}
+    \hrule
+    \vspace{1.5ex}
+}
+
+\newenvironment{cvcontent}{
+    \begin{list}{}{
+        \leftmargin=1.5em
+        \labelwidth=0pt
+        \labelsep=0pt
+    }\item[]
+}{
+    \end{list}
+}
+
+\newsavebox{\CBox}
+\def\textBF#1{\sbox\CBox{#1}\resizebox{\wd\CBox}{\ht\CBox}{\textcolor{linkcolour}{{#1}}}}
