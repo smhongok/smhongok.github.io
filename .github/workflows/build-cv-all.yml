@@ -10,7 +10,6 @@ on:
       - 'CV_SMH_alt3.tex'
       - 'CV_preamble.tex'
       - 'CV_body.tex'
-      - 'CV_body_alt3.tex'
 
 jobs:
   build:
