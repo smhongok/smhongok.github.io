@@ -1,0 +1,61 @@
+name: Build All CV PDFs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'CV_SMH.tex'
+      - 'CV_SMH_alt.tex'
+      - 'CV_SMH_alt2.tex'
+      - 'CV_SMH_alt3.tex'
+      - 'CV_preamble.tex'
+      - 'CV_body.tex'
+      - 'CV_body_alt3.tex'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile CV_SMH.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV_SMH.tex
+          latexmk_use_pdflatex: true
+
+      - name: Compile CV_SMH_alt.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV_SMH_alt.tex
+          latexmk_use_pdflatex: true
+
+      - name: Compile CV_SMH_alt2.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV_SMH_alt2.tex
+          latexmk_use_pdflatex: true
+
+      - name: Compile CV_SMH_alt3.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV_SMH_alt3.tex
+          latexmk_use_pdflatex: true
+
+      - name: Move PDFs to files/
+        run: |
+          mv CV_SMH.pdf files/CV_smhong.pdf
+          mv CV_SMH_alt.pdf files/CV_smhong_alt.pdf
+          mv CV_SMH_alt2.pdf files/CV_smhong_alt2.pdf
+          mv CV_SMH_alt3.pdf files/CV_smhong_alt3.pdf
+
+      - name: Commit updated PDFs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add files/CV_smhong.pdf files/CV_smhong_alt.pdf files/CV_smhong_alt2.pdf files/CV_smhong_alt3.pdf
+          git diff --cached --quiet || git commit -m "chore: rebuild all CV PDFs"
+          git push
