@@ -21,28 +21,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Compile CV_SMH.tex
+      - name: Compile all CV PDFs
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: CV_SMH.tex
-          latexmk_use_pdflatex: true
-
-      - name: Compile CV_SMH_alt.tex
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: CV_SMH_alt.tex
-          latexmk_use_pdflatex: true
-
-      - name: Compile CV_SMH_alt2.tex
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: CV_SMH_alt2.tex
-          latexmk_use_pdflatex: true
-
-      - name: Compile CV_SMH_alt3.tex
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: CV_SMH_alt3.tex
+          root_file: |
+            CV_SMH.tex
+            CV_SMH_alt.tex
+            CV_SMH_alt2.tex
+            CV_SMH_alt3.tex
           latexmk_use_pdflatex: true
 
       - name: Move PDFs to files/
